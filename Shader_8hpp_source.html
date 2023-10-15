@@ -99,100 +99,153 @@ $(document).ready(function(){initNavTree('Shader_8hpp_source.html',''); initResi
   <div class="headertitle"><div class="title">Shader.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<a href="Shader_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define _ROC_SHADER_GL_HPP_ </span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;RocLogger/RocLogger.hpp&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;glad/gl.h&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classShader.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="classShader.html">Shader</a></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classShaderHashMap.html">ShaderHashMap</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    GLuint m_program;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;RocLogger/RocLogger.hpp&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    GLuint LoadShader(<span class="keyword">const</span> std::string&amp; vertshader_file, <span class="keyword">const</span> std::string&amp; fragshader_file);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;glad/gl.h&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    std::string _shader_name;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_class" href="classShader.html">Shader</a>();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_class" href="classShader.html">Shader</a>(<span class="keyword">const</span> <a class="code hl_class" href="classShader.html">Shader</a>&amp; shad) { *<span class="keyword">this</span> = shad; }</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_class" href="classShader.html">Shader</a>(<span class="keyword">const</span> std::string&amp; vertshaderfile, <span class="keyword">const</span> std::string&amp; fragshaderfile, <span class="keyword">const</span> std::string&amp; shader_name);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code hl_class" href="classShader.html">Shader</a>&amp; shad);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> DeleteShader();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> Use() { glad_glUseProgram(m_program); }</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">bool</span> SetUniformFloat(<span class="keyword">const</span> std::string&amp; uniform, <span class="keywordtype">float</span> val);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">bool</span> SetUniformInt(<span class="keyword">const</span> std::string&amp; uniform, <span class="keywordtype">int</span> val);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">bool</span> SetUniformBool(<span class="keyword">const</span> std::string&amp; uniform, <span class="keywordtype">bool</span> val);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">bool</span> SetUniformVec2(<span class="keyword">const</span> std::string&amp; uniform, <span class="keywordtype">float</span> v1, <span class="keywordtype">float</span> v2);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">bool</span> SetUniformVec3(<span class="keyword">const</span> std::string&amp; uniform, <span class="keywordtype">float</span> v1, <span class="keywordtype">float</span> v2, <span class="keywordtype">float</span> v3);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">bool</span> SetUniformVec4(<span class="keyword">const</span> std::string&amp; uniform, <span class="keywordtype">float</span> v1, <span class="keywordtype">float</span> v2, <span class="keywordtype">float</span> v3, <span class="keywordtype">float</span> v4);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="};">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classShader.html">   52</a></span><span class="keyword">class </span><a class="code hl_class" href="classShader.html">Shader</a></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>{</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classShaderHashMap.html">ShaderHashMap</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classShader.html#a1d08824c68cd819c941978ec82f75b79">   60</a></span>    GLuint <a class="code hl_variable" href="classShader.html#a1d08824c68cd819c941978ec82f75b79">m_program</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    GLuint <a class="code hl_function" href="classShader.html#a40185f9187744173ea053d8837d7bf04">LoadShader</a>(<span class="keyword">const</span> std::string&amp; vertshader_file, <span class="keyword">const</span> std::string&amp; fragshader_file);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classShader.html#a246a31b15187170f4e43a56ff65a556e">   87</a></span>    std::string <a class="code hl_variable" href="classShader.html#a246a31b15187170f4e43a56ff65a556e">_shader_name</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <a class="code hl_function" href="classShader.html#a0d654ebaca4e0555197c0724c6d30610">Shader</a>();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classShader.html#a1051f04964ddf11f71b6d90bb6d892d0">  100</a></span>    <a class="code hl_function" href="classShader.html#a1051f04964ddf11f71b6d90bb6d892d0">Shader</a>(<span class="keyword">const</span> <a class="code hl_class" href="classShader.html">Shader</a>&amp; shad) { *<span class="keyword">this</span> = shad; }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_function" href="classShader.html#a0d654ebaca4e0555197c0724c6d30610">Shader</a>(<span class="keyword">const</span> std::string&amp; vertshaderfile, <span class="keyword">const</span> std::string&amp; fragshaderfile, <span class="keyword">const</span> std::string&amp; shader_name);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classShader.html#a706b4a0b4eaffeee6c79b81cc7c3260c">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classShader.html">Shader</a>&amp; shad);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classShader.html#a94618a9c9663f01b1d46b0dfaa145f48">DeleteShader</a>();</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="classShader.html#a6b11327cff651ffdb22988b6917b1650">  141</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classShader.html#a6b11327cff651ffdb22988b6917b1650">Use</a>() { glad_glUseProgram(<a class="code hl_variable" href="classShader.html#a1d08824c68cd819c941978ec82f75b79">m_program</a>); }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classShader.html#a85a754a318f3de708c63a88d01477b2c">SetUniformFloat</a>(<span class="keyword">const</span> std::string&amp; uniform, <span class="keywordtype">float</span> val);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classShader.html#ab6e3d06459b37636896df144f1f709f2">SetUniformInt</a>(<span class="keyword">const</span> std::string&amp; uniform, <span class="keywordtype">int</span> val);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classShader.html#aee51665766a00610a299b02be88637b3">SetUniformBool</a>(<span class="keyword">const</span> std::string&amp; uniform, <span class="keywordtype">bool</span> val);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classShader.html#a8c5faf2735c792300456fd45654ee26f">SetUniformVec2</a>(<span class="keyword">const</span> std::string&amp; uniform, <span class="keywordtype">float</span> v1, <span class="keywordtype">float</span> v2);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classShader.html#aaf60dea33b9ddad55251c165ce1ee59b">SetUniformVec3</a>(<span class="keyword">const</span> std::string&amp; uniform, <span class="keywordtype">float</span> v1, <span class="keywordtype">float</span> v2, <span class="keywordtype">float</span> v3);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classShader.html#a52e3022180205e30d5fff8541c3f2265">SetUniformVec4</a>(<span class="keyword">const</span> std::string&amp; uniform, <span class="keywordtype">float</span> v1, <span class="keywordtype">float</span> v2, <span class="keywordtype">float</span> v3, <span class="keywordtype">float</span> v4);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>};</div>
 </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classShaderHashMap.html">   44</a></span><span class="keyword">class </span><a class="code hl_class" href="classShaderHashMap.html">ShaderHashMap</a></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">typedef</span> <span class="keywordtype">long</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size_t;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_class" href="classShader.html">Shader</a>* _arr = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">size_t</span> _size = 0;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">size_t</span> _num_elements = 0;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">double</span> ratio = 0.7;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">int</span> get_next_mult_2(<span class="keywordtype">int</span> inval);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> regenerate_array();</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_class" href="classShaderHashMap.html">ShaderHashMap</a>(<span class="keywordtype">size_t</span> initial_size = 0);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> DeleteHashMap();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_class" href="classShaderHashMap.html">~ShaderHashMap</a>() { DeleteHashMap(); }</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_class" href="classShader.html">Shader</a>&amp; at(<span class="keyword">const</span> std::string&amp; key);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_class" href="classShader.html">Shader</a>&amp; operator[](<span class="keyword">const</span> std::string&amp; key) { <span class="keywordflow">return</span> at(key); }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">size_t</span> hash(<span class="keyword">const</span> std::string&amp; key);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">void</span> emplace(<span class="keyword">const</span> <a class="code hl_class" href="classShader.html">Shader</a>&amp; shader);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> emplace(<span class="keyword">const</span> std::string&amp; vertshaderfile, <span class="keyword">const</span> std::string&amp; fragshaderfile, <span class="keyword">const</span> std::string&amp; shader_name);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> erase(<span class="keyword">const</span> std::string&amp; key);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>};</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="foldopen" id="foldopen00230" data-start="{" data-end="};">
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="classShaderHashMap.html">  230</a></span><span class="keyword">class </span><a class="code hl_class" href="classShaderHashMap.html">ShaderHashMap</a></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>{</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="keyword">typedef</span> <span class="keywordtype">long</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size_t;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno"><a class="line" href="classShaderHashMap.html#a0531a55c948bdfd8109f85f50880540a">  236</a></span>    <a class="code hl_class" href="classShader.html">Shader</a>* <a class="code hl_variable" href="classShaderHashMap.html#a0531a55c948bdfd8109f85f50880540a">_arr</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="classShaderHashMap.html#a421b5a772bd4eed539e0092b0d10b975">  238</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="classShaderHashMap.html#a421b5a772bd4eed539e0092b0d10b975">_size</a> = 0;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno"><a class="line" href="classShaderHashMap.html#a5eff87ed4f8ee56c5bd84faa52bc069b">  240</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="classShaderHashMap.html#a5eff87ed4f8ee56c5bd84faa52bc069b">_num_elements</a> = 0;</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno"><a class="line" href="classShaderHashMap.html#a4e47c146a13ed4b75c72ffd6034b645f">  243</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="classShaderHashMap.html#a4e47c146a13ed4b75c72ffd6034b645f">ratio</a> = 0.7;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classShaderHashMap.html#a2463a2e7948c14a9cae93dc12cc7fce9">get_next_mult_2</a>(<span class="keywordtype">int</span> inval);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classShaderHashMap.html#a40921c1a08c94eee7d836cddc1c55833">regenerate_array</a>();</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    <a class="code hl_class" href="classShaderHashMap.html">ShaderHashMap</a>(<span class="keywordtype">size_t</span> initial_size = 0);</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classShaderHashMap.html#ab96c298f0b13c66cc93189361f780d55">DeleteHashMap</a>();</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno"><a class="line" href="classShaderHashMap.html#abe8979dad036fa42ef0df1a7bd197af4">  287</a></span>    <a class="code hl_function" href="classShaderHashMap.html#abe8979dad036fa42ef0df1a7bd197af4">~ShaderHashMap</a>() { <a class="code hl_function" href="classShaderHashMap.html#ab96c298f0b13c66cc93189361f780d55">DeleteHashMap</a>(); }</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    <a class="code hl_class" href="classShader.html">Shader</a>&amp; <a class="code hl_function" href="classShaderHashMap.html#a6e577b0c009ca442ff53fd54567790f7">at</a>(<span class="keyword">const</span> std::string&amp; key);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno"><a class="line" href="classShaderHashMap.html#a88d08e5a3a5223b52b43fa4eb8cfddc2">  306</a></span>    <a class="code hl_class" href="classShader.html">Shader</a>&amp; <a class="code hl_function" href="classShaderHashMap.html#a88d08e5a3a5223b52b43fa4eb8cfddc2">operator[]</a>(<span class="keyword">const</span> std::string&amp; key) { <span class="keywordflow">return</span> <a class="code hl_function" href="classShaderHashMap.html#a6e577b0c009ca442ff53fd54567790f7">at</a>(key); }</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="classShaderHashMap.html#a174bdf224d7658835a24f3d58fb0ded0">hash</a>(<span class="keyword">const</span> std::string&amp; key);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classShaderHashMap.html#aa8216f53560a89cd13693a5d31dc97cb">emplace</a>(<span class="keyword">const</span> <a class="code hl_class" href="classShader.html">Shader</a>&amp; shader);</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classShaderHashMap.html#aa8216f53560a89cd13693a5d31dc97cb">emplace</a>(<span class="keyword">const</span> std::string&amp; vertshaderfile, <span class="keyword">const</span> std::string&amp; fragshaderfile, <span class="keyword">const</span> std::string&amp; shader_name);</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classShaderHashMap.html#a059613d37c46a724aa3d476cb1e6535a">erase</a>(<span class="keyword">const</span> std::string&amp; key);</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>};</div>
 </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="foldopen" id="foldopen00072" data-start="{" data-end="};">
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classShaders.html">   72</a></span><span class="keyword">class </span><a class="code hl_class" href="classShaders.html">Shaders</a></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>{</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">static</span> <a class="code hl_class" href="classShaderHashMap.html">ShaderHashMap</a> ShaderMap;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> clear() { ShaderMap.DeleteHashMap(); }</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>};</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
+<div class="foldopen" id="foldopen00368" data-start="{" data-end="};">
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno"><a class="line" href="classShaders.html">  368</a></span><span class="keyword">class </span><a class="code hl_class" href="classShaders.html">Shaders</a></div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>{</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno"><a class="line" href="classShaders.html#a1c3b02d7e401d214f9b8aec351e19e59">  372</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classShaderHashMap.html">ShaderHashMap</a> <a class="code hl_variable" href="classShaders.html#a1c3b02d7e401d214f9b8aec351e19e59">ShaderMap</a>;</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno"><a class="line" href="classShaders.html#a3a100229762e1516b727b5d2e0b51546">  378</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classShaders.html#a3a100229762e1516b727b5d2e0b51546">clear</a>() { <a class="code hl_variable" href="classShaders.html#a1c3b02d7e401d214f9b8aec351e19e59">ShaderMap</a>.<a class="code hl_function" href="classShaderHashMap.html#ab96c298f0b13c66cc93189361f780d55">DeleteHashMap</a>(); }</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>};</div>
 </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><a class="code hl_class" href="classShader.html">Shader</a>&amp; LoadShader(<span class="keyword">const</span> std::string&amp; vertshaderfile, <span class="keyword">const</span> std::string&amp; fragshaderfile, <span class="keyword">const</span> std::string&amp; shader_name);</div>
-<div class="ttc" id="aclassShaderHashMap_html"><div class="ttname"><a href="classShaderHashMap.html">ShaderHashMap</a></div><div class="ttdef"><b>Definition</b> Shader.hpp:45</div></div>
-<div class="ttc" id="aclassShader_html"><div class="ttname"><a href="classShader.html">Shader</a></div><div class="ttdef"><b>Definition</b> Shader.hpp:16</div></div>
-<div class="ttc" id="aclassShaders_html"><div class="ttname"><a href="classShaders.html">Shaders</a></div><div class="ttdef"><b>Definition</b> Shader.hpp:73</div></div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span> </div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span><a class="code hl_class" href="classShader.html">Shader</a>&amp; <a class="code hl_function" href="Shader_8hpp.html#aa05900c6efaecba7f7af9f8441bb8b79">LoadShader</a>(<span class="keyword">const</span> std::string&amp; vertshaderfile, <span class="keyword">const</span> std::string&amp; fragshaderfile, <span class="keyword">const</span> std::string&amp; shader_name);</div>
+<div class="ttc" id="aShader_8hpp_html_aa05900c6efaecba7f7af9f8441bb8b79"><div class="ttname"><a href="Shader_8hpp.html#aa05900c6efaecba7f7af9f8441bb8b79">LoadShader</a></div><div class="ttdeci">Shader &amp; LoadShader(const std::string &amp;vertshaderfile, const std::string &amp;fragshaderfile, const std::string &amp;shader_name)</div><div class="ttdef"><b>Definition</b> Shader.cpp:377</div></div>
+<div class="ttc" id="aclassShaderHashMap_html"><div class="ttname"><a href="classShaderHashMap.html">ShaderHashMap</a></div><div class="ttdef"><b>Definition</b> Shader.hpp:231</div></div>
+<div class="ttc" id="aclassShaderHashMap_html_a0531a55c948bdfd8109f85f50880540a"><div class="ttname"><a href="classShaderHashMap.html#a0531a55c948bdfd8109f85f50880540a">ShaderHashMap::_arr</a></div><div class="ttdeci">Shader * _arr</div><div class="ttdef"><b>Definition</b> Shader.hpp:236</div></div>
+<div class="ttc" id="aclassShaderHashMap_html_a059613d37c46a724aa3d476cb1e6535a"><div class="ttname"><a href="classShaderHashMap.html#a059613d37c46a724aa3d476cb1e6535a">ShaderHashMap::erase</a></div><div class="ttdeci">void erase(const std::string &amp;key)</div><div class="ttdef"><b>Definition</b> Shader.cpp:354</div></div>
+<div class="ttc" id="aclassShaderHashMap_html_a174bdf224d7658835a24f3d58fb0ded0"><div class="ttname"><a href="classShaderHashMap.html#a174bdf224d7658835a24f3d58fb0ded0">ShaderHashMap::hash</a></div><div class="ttdeci">size_t hash(const std::string &amp;key)</div><div class="ttdef"><b>Definition</b> Shader.cpp:284</div></div>
+<div class="ttc" id="aclassShaderHashMap_html_a2463a2e7948c14a9cae93dc12cc7fce9"><div class="ttname"><a href="classShaderHashMap.html#a2463a2e7948c14a9cae93dc12cc7fce9">ShaderHashMap::get_next_mult_2</a></div><div class="ttdeci">int get_next_mult_2(int inval)</div><div class="ttdef"><b>Definition</b> Shader.cpp:186</div></div>
+<div class="ttc" id="aclassShaderHashMap_html_a40921c1a08c94eee7d836cddc1c55833"><div class="ttname"><a href="classShaderHashMap.html#a40921c1a08c94eee7d836cddc1c55833">ShaderHashMap::regenerate_array</a></div><div class="ttdeci">void regenerate_array()</div><div class="ttdef"><b>Definition</b> Shader.cpp:194</div></div>
+<div class="ttc" id="aclassShaderHashMap_html_a421b5a772bd4eed539e0092b0d10b975"><div class="ttname"><a href="classShaderHashMap.html#a421b5a772bd4eed539e0092b0d10b975">ShaderHashMap::_size</a></div><div class="ttdeci">size_t _size</div><div class="ttdef"><b>Definition</b> Shader.hpp:238</div></div>
+<div class="ttc" id="aclassShaderHashMap_html_a4e47c146a13ed4b75c72ffd6034b645f"><div class="ttname"><a href="classShaderHashMap.html#a4e47c146a13ed4b75c72ffd6034b645f">ShaderHashMap::ratio</a></div><div class="ttdeci">double ratio</div><div class="ttdef"><b>Definition</b> Shader.hpp:243</div></div>
+<div class="ttc" id="aclassShaderHashMap_html_a5eff87ed4f8ee56c5bd84faa52bc069b"><div class="ttname"><a href="classShaderHashMap.html#a5eff87ed4f8ee56c5bd84faa52bc069b">ShaderHashMap::_num_elements</a></div><div class="ttdeci">size_t _num_elements</div><div class="ttdef"><b>Definition</b> Shader.hpp:240</div></div>
+<div class="ttc" id="aclassShaderHashMap_html_a6e577b0c009ca442ff53fd54567790f7"><div class="ttname"><a href="classShaderHashMap.html#a6e577b0c009ca442ff53fd54567790f7">ShaderHashMap::at</a></div><div class="ttdeci">Shader &amp; at(const std::string &amp;key)</div><div class="ttdef"><b>Definition</b> Shader.cpp:256</div></div>
+<div class="ttc" id="aclassShaderHashMap_html_a88d08e5a3a5223b52b43fa4eb8cfddc2"><div class="ttname"><a href="classShaderHashMap.html#a88d08e5a3a5223b52b43fa4eb8cfddc2">ShaderHashMap::operator[]</a></div><div class="ttdeci">Shader &amp; operator[](const std::string &amp;key)</div><div class="ttdef"><b>Definition</b> Shader.hpp:306</div></div>
+<div class="ttc" id="aclassShaderHashMap_html_aa8216f53560a89cd13693a5d31dc97cb"><div class="ttname"><a href="classShaderHashMap.html#aa8216f53560a89cd13693a5d31dc97cb">ShaderHashMap::emplace</a></div><div class="ttdeci">void emplace(const Shader &amp;shader)</div><div class="ttdef"><b>Definition</b> Shader.cpp:295</div></div>
+<div class="ttc" id="aclassShaderHashMap_html_ab96c298f0b13c66cc93189361f780d55"><div class="ttname"><a href="classShaderHashMap.html#ab96c298f0b13c66cc93189361f780d55">ShaderHashMap::DeleteHashMap</a></div><div class="ttdeci">void DeleteHashMap()</div><div class="ttdef"><b>Definition</b> Shader.cpp:241</div></div>
+<div class="ttc" id="aclassShaderHashMap_html_abe8979dad036fa42ef0df1a7bd197af4"><div class="ttname"><a href="classShaderHashMap.html#abe8979dad036fa42ef0df1a7bd197af4">ShaderHashMap::~ShaderHashMap</a></div><div class="ttdeci">~ShaderHashMap()</div><div class="ttdef"><b>Definition</b> Shader.hpp:287</div></div>
+<div class="ttc" id="aclassShader_html"><div class="ttname"><a href="classShader.html">Shader</a></div><div class="ttdef"><b>Definition</b> Shader.hpp:53</div></div>
+<div class="ttc" id="aclassShader_html_a0d654ebaca4e0555197c0724c6d30610"><div class="ttname"><a href="classShader.html#a0d654ebaca4e0555197c0724c6d30610">Shader::Shader</a></div><div class="ttdeci">Shader()</div><div class="ttdef"><b>Definition</b> Shader.cpp:115</div></div>
+<div class="ttc" id="aclassShader_html_a1051f04964ddf11f71b6d90bb6d892d0"><div class="ttname"><a href="classShader.html#a1051f04964ddf11f71b6d90bb6d892d0">Shader::Shader</a></div><div class="ttdeci">Shader(const Shader &amp;shad)</div><div class="ttdef"><b>Definition</b> Shader.hpp:100</div></div>
+<div class="ttc" id="aclassShader_html_a1d08824c68cd819c941978ec82f75b79"><div class="ttname"><a href="classShader.html#a1d08824c68cd819c941978ec82f75b79">Shader::m_program</a></div><div class="ttdeci">GLuint m_program</div><div class="ttdef"><b>Definition</b> Shader.hpp:60</div></div>
+<div class="ttc" id="aclassShader_html_a246a31b15187170f4e43a56ff65a556e"><div class="ttname"><a href="classShader.html#a246a31b15187170f4e43a56ff65a556e">Shader::_shader_name</a></div><div class="ttdeci">std::string _shader_name</div><div class="ttdef"><b>Definition</b> Shader.hpp:87</div></div>
+<div class="ttc" id="aclassShader_html_a40185f9187744173ea053d8837d7bf04"><div class="ttname"><a href="classShader.html#a40185f9187744173ea053d8837d7bf04">Shader::LoadShader</a></div><div class="ttdeci">GLuint LoadShader(const std::string &amp;vertshader_file, const std::string &amp;fragshader_file)</div><div class="ttdef"><b>Definition</b> Shader.cpp:15</div></div>
+<div class="ttc" id="aclassShader_html_a52e3022180205e30d5fff8541c3f2265"><div class="ttname"><a href="classShader.html#a52e3022180205e30d5fff8541c3f2265">Shader::SetUniformVec4</a></div><div class="ttdeci">bool SetUniformVec4(const std::string &amp;uniform, float v1, float v2, float v3, float v4)</div><div class="ttdef"><b>Definition</b> Shader.cpp:176</div></div>
+<div class="ttc" id="aclassShader_html_a6b11327cff651ffdb22988b6917b1650"><div class="ttname"><a href="classShader.html#a6b11327cff651ffdb22988b6917b1650">Shader::Use</a></div><div class="ttdeci">void Use()</div><div class="ttdef"><b>Definition</b> Shader.hpp:141</div></div>
+<div class="ttc" id="aclassShader_html_a706b4a0b4eaffeee6c79b81cc7c3260c"><div class="ttname"><a href="classShader.html#a706b4a0b4eaffeee6c79b81cc7c3260c">Shader::operator=</a></div><div class="ttdeci">void operator=(const Shader &amp;shad)</div><div class="ttdef"><b>Definition</b> Shader.cpp:124</div></div>
+<div class="ttc" id="aclassShader_html_a85a754a318f3de708c63a88d01477b2c"><div class="ttname"><a href="classShader.html#a85a754a318f3de708c63a88d01477b2c">Shader::SetUniformFloat</a></div><div class="ttdeci">bool SetUniformFloat(const std::string &amp;uniform, float val)</div><div class="ttdef"><b>Definition</b> Shader.cpp:141</div></div>
+<div class="ttc" id="aclassShader_html_a8c5faf2735c792300456fd45654ee26f"><div class="ttname"><a href="classShader.html#a8c5faf2735c792300456fd45654ee26f">Shader::SetUniformVec2</a></div><div class="ttdeci">bool SetUniformVec2(const std::string &amp;uniform, float v1, float v2)</div><div class="ttdef"><b>Definition</b> Shader.cpp:162</div></div>
+<div class="ttc" id="aclassShader_html_a94618a9c9663f01b1d46b0dfaa145f48"><div class="ttname"><a href="classShader.html#a94618a9c9663f01b1d46b0dfaa145f48">Shader::DeleteShader</a></div><div class="ttdeci">void DeleteShader()</div><div class="ttdef"><b>Definition</b> Shader.cpp:130</div></div>
+<div class="ttc" id="aclassShader_html_aaf60dea33b9ddad55251c165ce1ee59b"><div class="ttname"><a href="classShader.html#aaf60dea33b9ddad55251c165ce1ee59b">Shader::SetUniformVec3</a></div><div class="ttdeci">bool SetUniformVec3(const std::string &amp;uniform, float v1, float v2, float v3)</div><div class="ttdef"><b>Definition</b> Shader.cpp:169</div></div>
+<div class="ttc" id="aclassShader_html_ab6e3d06459b37636896df144f1f709f2"><div class="ttname"><a href="classShader.html#ab6e3d06459b37636896df144f1f709f2">Shader::SetUniformInt</a></div><div class="ttdeci">bool SetUniformInt(const std::string &amp;uniform, int val)</div><div class="ttdef"><b>Definition</b> Shader.cpp:148</div></div>
+<div class="ttc" id="aclassShader_html_aee51665766a00610a299b02be88637b3"><div class="ttname"><a href="classShader.html#aee51665766a00610a299b02be88637b3">Shader::SetUniformBool</a></div><div class="ttdeci">bool SetUniformBool(const std::string &amp;uniform, bool val)</div><div class="ttdef"><b>Definition</b> Shader.cpp:155</div></div>
+<div class="ttc" id="aclassShaders_html"><div class="ttname"><a href="classShaders.html">Shaders</a></div><div class="ttdef"><b>Definition</b> Shader.hpp:369</div></div>
+<div class="ttc" id="aclassShaders_html_a1c3b02d7e401d214f9b8aec351e19e59"><div class="ttname"><a href="classShaders.html#a1c3b02d7e401d214f9b8aec351e19e59">Shaders::ShaderMap</a></div><div class="ttdeci">static ShaderHashMap ShaderMap</div><div class="ttdef"><b>Definition</b> Shader.hpp:372</div></div>
+<div class="ttc" id="aclassShaders_html_a3a100229762e1516b727b5d2e0b51546"><div class="ttname"><a href="classShaders.html#a3a100229762e1516b727b5d2e0b51546">Shaders::clear</a></div><div class="ttdeci">static void clear()</div><div class="ttdef"><b>Definition</b> Shader.hpp:378</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_2b5be651b6c0a66b392f466b8aa97e51.html">gen-files</a></li><li class="navelem"><a class="el" href="dir_7921784d17ff334b07681a73ba3a02df.html">include</a></li><li class="navelem"><a class="el" href="dir_070eb8a5f9a1b8d81dbba7253d605114.html">Roc_GL</a></li><li class="navelem"><b>Shader.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_2b5be651b6c0a66b392f466b8aa97e51.html">gen-files</a></li><li class="navelem"><a class="el" href="dir_7921784d17ff334b07681a73ba3a02df.html">include</a></li><li class="navelem"><a class="el" href="dir_070eb8a5f9a1b8d81dbba7253d605114.html">Roc_GL</a></li><li class="navelem"><a class="el" href="Shader_8hpp.html">Shader.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

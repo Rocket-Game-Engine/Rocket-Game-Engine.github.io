@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rocket Game Engine: gen-files/src/Roc_GL Directory Reference</title>
+<title>Rocket Game Engine: gen-files/src/Roc_GL/Shader.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript">var page_layout=1;</script>
 <script type="text/javascript" src="jquery.js"></script>
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('dir_f67d337b6df917774e3ac839bfee6597.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('Shader_8cpp.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -96,25 +96,73 @@ $(document).ready(function(){initNavTree('dir_f67d337b6df917774e3ac839bfee6597.h
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Roc_GL Directory Reference</div></div>
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">Shader.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Implementation for <a class="el" href="Shader_8hpp.html">Shader.hpp</a>.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
-Files</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><span class="icondoc"></span>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CoordinateSystem_8cpp.html">CoordinateSystem.cpp</a></td></tr>
-<tr class="memdesc:CoordinateSystem_8cpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation for <a class="el" href="CoordinateSystem_8hpp.html">CoordinateSystem.hpp</a>. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><span class="icondoc"></span>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Shader_8cpp.html">Shader.cpp</a></td></tr>
-<tr class="memdesc:Shader_8cpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation for <a class="el" href="Shader_8hpp.html">Shader.hpp</a>. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aa05900c6efaecba7f7af9f8441bb8b79" id="r_aa05900c6efaecba7f7af9f8441bb8b79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classShader.html">Shader</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Shader_8cpp.html#aa05900c6efaecba7f7af9f8441bb8b79">LoadShader</a> (const std::string &amp;vertshaderfile, const std::string &amp;fragshaderfile, const std::string &amp;shader_name)</td></tr>
+<tr class="separator:aa05900c6efaecba7f7af9f8441bb8b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Implementation for <a class="el" href="Shader_8hpp.html">Shader.hpp</a>. </p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="aa05900c6efaecba7f7af9f8441bb8b79" name="aa05900c6efaecba7f7af9f8441bb8b79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa05900c6efaecba7f7af9f8441bb8b79">&#9670;&#160;</a></span>LoadShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classShader.html">Shader</a> &amp; LoadShader </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>vertshaderfile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fragshaderfile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>shader_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This is how one should create a <a class="el" href="classShader.html">Shader</a> object. It loads the <a class="el" href="classShader.html">Shader</a>, emplaces it inside the wrapper object <a class="el" href="classShaders.html">Shaders</a>, then returns it in case the user needs it immediately.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertshaderfile</td><td>A string path relative to where the binary is called from that represents where the vertex shader source file is located.</td></tr>
+    <tr><td class="paramname">fragshaderfile</td><td>A string path relative to where the binary is called from that represents where the fragment shader source file is located.</td></tr>
+    <tr><td class="paramname">shader_name</td><td>The identifier to give the newly created <a class="el" href="classShader.html">Shader</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the created <a class="el" href="classShader.html">Shader</a> object. If there are errors in usage, check the logs, where any errors will show. </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_2b5be651b6c0a66b392f466b8aa97e51.html">gen-files</a></li><li class="navelem"><a class="el" href="dir_f40a7dc08b8259ff6e00a97f9bcdc6e1.html">src</a></li><li class="navelem"><a class="el" href="dir_f67d337b6df917774e3ac839bfee6597.html">Roc_GL</a></li>
+    <li class="navelem"><a class="el" href="dir_2b5be651b6c0a66b392f466b8aa97e51.html">gen-files</a></li><li class="navelem"><a class="el" href="dir_f40a7dc08b8259ff6e00a97f9bcdc6e1.html">src</a></li><li class="navelem"><a class="el" href="dir_f67d337b6df917774e3ac839bfee6597.html">Roc_GL</a></li><li class="navelem"><a class="el" href="Shader_8cpp.html">Shader.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

@@ -103,22 +103,77 @@ $(document).ready(function(){initNavTree('classShaders.html',''); initResizable(
   <div class="headertitle"><div class="title">Shaders Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Shader_8hpp_source.html">Shader.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a3a100229762e1516b727b5d2e0b51546" id="r_a3a100229762e1516b727b5d2e0b51546"><td class="memItemLeft" align="right" valign="top"><a id="a3a100229762e1516b727b5d2e0b51546" name="a3a100229762e1516b727b5d2e0b51546"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+<tr class="memitem:a3a100229762e1516b727b5d2e0b51546" id="r_a3a100229762e1516b727b5d2e0b51546"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShaders.html#a3a100229762e1516b727b5d2e0b51546">clear</a> ()</td></tr>
 <tr class="separator:a3a100229762e1516b727b5d2e0b51546"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a1c3b02d7e401d214f9b8aec351e19e59" id="r_a1c3b02d7e401d214f9b8aec351e19e59"><td class="memItemLeft" align="right" valign="top"><a id="a1c3b02d7e401d214f9b8aec351e19e59" name="a1c3b02d7e401d214f9b8aec351e19e59"></a>
-static <a class="el" href="classShaderHashMap.html">ShaderHashMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ShaderMap</b></td></tr>
+<tr class="memitem:a1c3b02d7e401d214f9b8aec351e19e59" id="r_a1c3b02d7e401d214f9b8aec351e19e59"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classShaderHashMap.html">ShaderHashMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShaders.html#a1c3b02d7e401d214f9b8aec351e19e59">ShaderMap</a></td></tr>
 <tr class="separator:a1c3b02d7e401d214f9b8aec351e19e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A holder class for the static <a class="el" href="classShaderHashMap.html">ShaderHashMap</a>.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Add direct accessor to the class so we don't have to write <a class="el" href="classShaders.html#a1c3b02d7e401d214f9b8aec351e19e59">Shaders::ShaderMap</a>[key].</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Tim Bishop </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3a100229762e1516b727b5d2e0b51546" name="a3a100229762e1516b727b5d2e0b51546"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a100229762e1516b727b5d2e0b51546">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Shaders::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Clears the entire map, unloading every currently loaded <a class="el" href="classShader.html">Shader</a>. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1c3b02d7e401d214f9b8aec351e19e59" name="a1c3b02d7e401d214f9b8aec351e19e59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c3b02d7e401d214f9b8aec351e19e59">&#9670;&#160;</a></span>ShaderMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classShaderHashMap.html">ShaderHashMap</a> Shaders::ShaderMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The static <a class="el" href="classShaderHashMap.html">ShaderHashMap</a> object. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>gen-files/include/Roc_GL/<a class="el" href="Shader_8hpp_source.html">Shader.hpp</a></li>
-<li>gen-files/src/Roc_GL/<b>Shader.cpp</b></li>
+<li>gen-files/src/Roc_GL/<a class="el" href="Shader_8cpp.html">Shader.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
