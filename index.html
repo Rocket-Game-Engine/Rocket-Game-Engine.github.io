@@ -101,18 +101,77 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
 <ul><li class="level1"><a href="#welcome_sec">Welcome!</a></li>
-<li class="level1"><a href="#building_sec">Building the Engine</a></li>
+<li class="level1"><a href="#building_sec">Building the Engine</a><ul><li class="level2"><a href="#compiling_linux">Compiling on Linux</a></li>
+</ul>
+</li>
 <li class="level1"><a href="#further_reading">Further Reading</a></li>
 </ul>
 </div>
 <div class="textblock"><h1><a class="anchor" id="welcome_sec"></a>
 Welcome!</h1>
+<p>Welcome to the Rocket Game Engine! This is an engine built from scratch by Tim Bishop to facilitate learning and growth, as well as satiate a primal urge to code just about anything.</p>
+<p>The engine is built using an Entity-Component System. For those not familiar, here are the general rules the Engine follows: </p><ul>
+<li>
+Any "thing" in the game world is an Entity </li>
+<li>
+Any data values a "thing" can have are a part of one or more <a class="el" href="classComponent.html">Components</a> </li>
+<li>
+Any functionality a "thing" can have is a <a class="el" href="classSystem.html">System</a>, which looks for Entities with specific components. </li>
+</ul>
+<p>For example, a basic Character could be defined like this (note, the language used here is the Rscene language, another part of the Rocket Engine.)</p>
+<div class="fragment"><div class="line">Entity <span class="stringliteral">&quot;character&quot;</span> {</div>
+<div class="line">    <a class="code hl_class" href="classTransform.html">Transform</a> {</div>
+<div class="line">        <span class="keywordtype">double</span> x = 5.0;</div>
+<div class="line">        <span class="keywordtype">double</span> y = 5.0;</div>
+<div class="line">    }</div>
+<div class="line">    <a class="code hl_class" href="classSprite.html">Sprite</a> {</div>
+<div class="line">        <span class="keywordtype">string</span> texture_key = <span class="stringliteral">&quot;some_tex&quot;</span>;</div>
+<div class="line">        <span class="keywordtype">string</span> shader_key = <span class="stringliteral">&quot;some_shader&quot;</span>;</div>
+<div class="line">        <span class="keywordtype">double</span> width = 5.0;</div>
+<div class="line">        <span class="keywordtype">double</span> height = 5.0;</div>
+<div class="line">    }</div>
+<div class="line">    <a class="code hl_class" href="classRectangleCollider.html">RectangleCollider</a> {</div>
+<div class="line">        <span class="keywordtype">double</span> width = 5.0;</div>
+<div class="line">        <span class="keywordtype">double</span> height = 5.0;</div>
+<div class="line">    }</div>
+<div class="line">    CharacterMovement {</div>
+<div class="line">        key left = LEFT;</div>
+<div class="line">        key right = RIGHT;</div>
+<div class="line">        <span class="keywordtype">double</span> runspeed = 15.0;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassRectangleCollider_html"><div class="ttname"><a href="classRectangleCollider.html">RectangleCollider</a></div><div class="ttdef"><b>Definition</b> RectangleCollider.hpp:22</div></div>
+<div class="ttc" id="aclassSprite_html"><div class="ttname"><a href="classSprite.html">Sprite</a></div><div class="ttdef"><b>Definition</b> Sprite.h:16</div></div>
+<div class="ttc" id="aclassTransform_html"><div class="ttname"><a href="classTransform.html">Transform</a></div><div class="ttdef"><b>Definition</b> Transform.h:6</div></div>
+</div><!-- fragment --><p>The Entity named "character" has 4 components attached to it: A <a class="el" href="classTransform.html">Transform</a>, a <a class="el" href="classSprite.html">Sprite</a>, a <a class="el" href="classRectangleCollider.html">RectangleCollider</a>, and a CharacterMovement. <a class="el" href="classTransform.html">Transform</a>, <a class="el" href="classSprite.html">Sprite</a>, and <a class="el" href="classRectangleCollider.html">RectangleCollider</a> are all examples of Components that ship with the engine, but CharacterMovement is a custom created <a class="el" href="classComponent.html">Component</a>.</p>
+<p>These hypothetical components could be wrapped together with a <a class="el" href="classSystem.html">System</a>. For more information about Systems, check out this.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Add <a class="el" href="classSystem.html">System</a> page</dd></dl>
 <h1><a class="anchor" id="building_sec"></a>
 Building the Engine</h1>
+<p>Building the engine is fairly simple. It requires a few prerequisites, though:</p><ul>
+<li>Git</li>
+<li>Premake (version 5 is the latest at the time of writing, and the one supported by the engine)</li>
+<li>Doxygen (for automatically creating documentation)</li>
+<li>C++ compilation support (for your operating system, that could be very different)</li>
+<li>Makefile support (again, varies by operating system)</li>
+</ul>
+<h2><a class="anchor" id="compiling_linux"></a>
+Compiling on Linux</h2>
+<ul>
+<li>First, clone the repository: <div class="fragment"><div class="line">git clone https:<span class="comment">//github.com/Rocket-Game-Engine/Rocket.git --recursive</span></div>
+</div><!-- fragment --></li>
+<li>Run the following to create a Makefile for the project: <div class="fragment"><div class="line">premake5 gmake2</div>
+</div><!-- fragment --></li>
+<li>If you're building a Debug build: <div class="fragment"><div class="line">make</div>
+</div><!-- fragment --></li>
+<li>If you're building a Release build: <div class="fragment"><div class="line">make config=release</div>
+</div><!-- fragment --></li>
+</ul>
+<p>These steps should build you the Engine, the example pong clone I'm making, and the documentation.</p>
 <h1><a class="anchor" id="further_reading"></a>
 Further Reading</h1>
 <p>First, <a class="el" href="application_layout.html">here is documentation for how an application should be laid out.</a></p>
-<p>Additionally, <a class="el" href="coordsystem.html">here is where one can learn about our Coordinate %System.</a> </p>
+<p>Additionally, <a class="el" href="coordsystem.html">here is where one can learn about our Coordinate System.</a> </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

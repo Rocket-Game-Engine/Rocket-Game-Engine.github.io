@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rocket Game Engine: Todo List</title>
+<title>Rocket Game Engine: gen-files/src/Roc_GL/Texture.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript">var page_layout=1;</script>
 <script type="text/javascript" src="jquery.js"></script>
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('Texture_8cpp.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -95,36 +95,39 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 </div>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">Todo List</div></div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">Texture.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><dl class="reflist">
-<dt>Member <a class="el" href="classComponentArray.html#a45517d620d2385c5f93978e6b2e1a620">ComponentArray&lt; T &gt;::GetData</a>  (Entity entity)</dt>
-<dd><a class="anchor" id="_todo000009"></a>PLEASE FIX THIS, I HATE THIS CODE  </dd>
-<dt>Member <a class="el" href="classComponentManager.html#a5ea1997bd0256e94b604b8ce8cd2a2d3">ComponentManager::GetComponent</a>  (Entity entity)</dt>
-<dd><a class="anchor" id="_todo000008"></a>AGAIN PLEASE FIX, I HATE ASSERTS IN REAL CODE  </dd>
-<dt>Class <a class="el" href="structCoordinateSystem.html">CoordinateSystem</a>  </dt>
-<dd><a class="anchor" id="_todo000003"></a>Remove this class and its properties, they serve zero function to the overall design of the engine.  </dd>
-<dt>File <a class="el" href="LoadRscene_8hpp.html">LoadRscene.hpp</a>  </dt>
-<dd><a class="anchor" id="_todo000006"></a>Come up with a better name than RScene... Current frontrunners are "Liftoff" and "Arsene" </dd>
-<dt>Member <a class="el" href="LoadRscene_8hpp.html#a1c5c70438301ce70eb028e5bba115125">LoadScene</a>  (const std::string &amp;filepath)</dt>
-<dd><a class="anchor" id="_todo000007"></a>Add more thorough error checking for syntax </dd>
-<dt>Member <a class="el" href="classPaddleControls.html#a6c080942803bed34d56833ad18e86087">PaddleControls::Do</a>  (GLFWwindow *win)</dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000001"></a>Add deltatime to this function, it really should be tied to the framerate.</p>
-<p class="enddd"><a class="anchor" id="_todo000002"></a>Remove GLFWwindow* from arguments list, now that the keyboard works correctly, we don't need it. </p>
-</dd>
-<dt>Class <a class="el" href="classShaders.html">Shaders</a>  </dt>
-<dd><a class="anchor" id="_todo000004"></a>Add direct accessor to the class so we don't have to write <a class="el" href="classShaders.html#a1c3b02d7e401d214f9b8aec351e19e59">Shaders::ShaderMap</a>[key]. </dd>
-<dt>page <a class="el" href="index.html">The Rocket Engine Documentation</a>  </dt>
-<dd><a class="anchor" id="_todo000005"></a>Add <a class="el" href="classSystem.html">System</a> page</dd>
-</dl>
+
+<p>Implementation for <a class="el" href="Texture_8hpp_source.html">Texture.hpp</a>.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a30bfdb5010f31fc5301748730c46dfef" id="r_a30bfdb5010f31fc5301748730c46dfef"><td class="memItemLeft" align="right" valign="top"><a id="a30bfdb5010f31fc5301748730c46dfef" name="a30bfdb5010f31fc5301748730c46dfef"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>texture_hash</b> (const std::string &amp;key)</td></tr>
+<tr class="separator:a30bfdb5010f31fc5301748730c46dfef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a056daee4f01c4b54a3f4e689ab7f4504" id="r_a056daee4f01c4b54a3f4e689ab7f4504"><td class="memItemLeft" align="right" valign="top"><a id="a056daee4f01c4b54a3f4e689ab7f4504" name="a056daee4f01c4b54a3f4e689ab7f4504"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearTexture</b> (<a class="el" href="structTextureInfo.html">TextureInfo</a> &amp;info)</td></tr>
+<tr class="separator:a056daee4f01c4b54a3f4e689ab7f4504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3acebffcde3df7128f2f0f558f3e463" id="r_ad3acebffcde3df7128f2f0f558f3e463"><td class="memItemLeft" align="right" valign="top"><a id="ad3acebffcde3df7128f2f0f558f3e463" name="ad3acebffcde3df7128f2f0f558f3e463"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;stream, const <a class="el" href="structTextureInfo.html">TextureInfo</a> &amp;info)</td></tr>
+<tr class="separator:ad3acebffcde3df7128f2f0f558f3e463"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae1048b8c4d8c708bf4184cdb3e868cf" id="r_aae1048b8c4d8c708bf4184cdb3e868cf"><td class="memItemLeft" align="right" valign="top"><a id="aae1048b8c4d8c708bf4184cdb3e868cf" name="aae1048b8c4d8c708bf4184cdb3e868cf"></a>
+<a class="el" href="structTextureInfo.html">TextureInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>LoadTexture</b> (const std::string &amp;filename, const std::string &amp;texture_key)</td></tr>
+<tr class="separator:aae1048b8c4d8c708bf4184cdb3e868cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Implementation for <a class="el" href="Texture_8hpp_source.html">Texture.hpp</a>. </p>
 </div></div><!-- contents -->
-</div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="dir_2b5be651b6c0a66b392f466b8aa97e51.html">gen-files</a></li><li class="navelem"><a class="el" href="dir_f40a7dc08b8259ff6e00a97f9bcdc6e1.html">src</a></li><li class="navelem"><a class="el" href="dir_f67d337b6df917774e3ac839bfee6597.html">Roc_GL</a></li><li class="navelem"><a class="el" href="Texture_8cpp.html">Texture.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
