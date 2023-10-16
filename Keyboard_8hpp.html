@@ -98,17 +98,32 @@ $(document).ready(function(){initNavTree('Keyboard_8hpp.html',''); initResizable
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle"><div class="title">Keyboard.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;GLFW/glfw3.h&gt;</code><br />
+<code>#include &lt;boost/preprocessor.hpp&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;bitset&gt;</code><br />
+</div>
 <p><a href="Keyboard_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRocketKeyboard.html">RocketKeyboard</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a4a78158ef4f1a18589c78f73c76bae25" id="r_a4a78158ef4f1a18589c78f73c76bae25"><td class="memItemLeft" align="right" valign="top"><a id="a4a78158ef4f1a18589c78f73c76bae25" name="a4a78158ef4f1a18589c78f73c76bae25"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ALL_KEYS</b>&#160;&#160;&#160;ENTER, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, ESCAPE, BACKSPACE, SPACE, UP, DOWN, LEFT, RIGHT</td></tr>
+<tr class="separator:a4a78158ef4f1a18589c78f73c76bae25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a8c7403a867e0c9543467ee8754050d" id="r_a9a8c7403a867e0c9543467ee8754050d"><td class="memItemLeft" align="right" valign="top"><a id="a9a8c7403a867e0c9543467ee8754050d" name="a9a8c7403a867e0c9543467ee8754050d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NUM_KEYS</b>&#160;&#160;&#160;BOOST_PP_ADD(BOOST_PP_VARIADIC_SIZE(ALL_KEYS), 1)</td></tr>
+<tr class="separator:a9a8c7403a867e0c9543467ee8754050d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>

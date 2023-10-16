@@ -97,17 +97,33 @@ $(document).ready(function(){initNavTree('Application_8hpp.html',''); initResiza
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">Application.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;glad/gl.h&gt;</code><br />
+<code>#include &lt;GLFW/glfw3.h&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+</div>
 <p><a href="Application_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApplication.html">Application</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a8773f8232209b0b1c9ef296da468fea0" id="r_a8773f8232209b0b1c9ef296da468fea0"><td class="memItemLeft" align="right" valign="top"><a id="a8773f8232209b0b1c9ef296da468fea0" name="a8773f8232209b0b1c9ef296da468fea0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>_ROC_APPLICATION_GLFW_HPP_</b></td></tr>
+<tr class="separator:a8773f8232209b0b1c9ef296da468fea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a270f853c8fda971b00be21f9089f6578" id="r_a270f853c8fda971b00be21f9089f6578"><td class="memItemLeft" align="right" valign="top"><a id="a270f853c8fda971b00be21f9089f6578" name="a270f853c8fda971b00be21f9089f6578"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>InitComponent</b>(comp)&#160;&#160;&#160;LogInfo(&quot;Registering &quot; #comp &quot;...&quot;); if (!cd-&gt;RegisterComponent&lt;comp&gt;()) { LogError(&quot;Could not register &quot; #comp &quot;!&quot;); }</td></tr>
+<tr class="separator:a270f853c8fda971b00be21f9089f6578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cbde40aa68aa647751ca5fd4d01edb8" id="r_a8cbde40aa68aa647751ca5fd4d01edb8"><td class="memItemLeft" align="right" valign="top"><a id="a8cbde40aa68aa647751ca5fd4d01edb8" name="a8cbde40aa68aa647751ca5fd4d01edb8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>InitSystem</b>(sys)&#160;&#160;&#160;LogInfo(&quot;Registering &quot; #sys &quot;...&quot;); if (!cd-&gt;RegisterSystem&lt;sys&gt;()) { LogError(&quot;Could not register &quot; #sys &quot;!&quot;); } else { cd-&gt;SetSystemSignature&lt;sys&gt;(sys().GetSignature()); }</td></tr>
+<tr class="separator:a8cbde40aa68aa647751ca5fd4d01edb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file defines the base <a class="el" href="classApplication.html">Application</a> class for the Rocket Engine. Any application that wants to use Rocket efficiently must subclass the <a class="el" href="classApplication.html">Application</a> class. Inside this subclass, the user should:</p>

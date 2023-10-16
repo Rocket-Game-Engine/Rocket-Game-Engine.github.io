@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rocket Game Engine: gen-files/include/ECS/Systems/BallSystem.hpp File Reference</title>
+<title>Rocket Game Engine: gen-files/include/Roc_GL/Texture.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript">var page_layout=1;</script>
 <script type="text/javascript" src="jquery.js"></script>
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('BallSystem_8hpp.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('Texture_8hpp.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -97,31 +97,51 @@ $(document).ready(function(){initNavTree('BallSystem_8hpp.html',''); initResizab
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
-  <div class="headertitle"><div class="title">BallSystem.hpp File Reference</div></div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">Texture.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;Roc_ECS.h&quot;</code><br />
-<code>#include &quot;ECS/Components/Ball.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="Keyboard_8hpp_source.html">Base/Keyboard.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;glad/gl.h&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
+<code>#include &quot;RocLogger/RocLogger.hpp&quot;</code><br />
+<code>#include &lt;stb_image.h&gt;</code><br />
 </div>
-<p><a href="BallSystem_8hpp_source.html">Go to the source code of this file.</a></p>
+<p><a href="Texture_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBallSystem.html">BallSystem</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTextureInfo.html">TextureInfo</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTexInfoHash.html">TexInfoHash</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTextureHashMap.html">TextureHashMap</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTextures.html">Textures</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a056daee4f01c4b54a3f4e689ab7f4504" id="r_a056daee4f01c4b54a3f4e689ab7f4504"><td class="memItemLeft" align="right" valign="top"><a id="a056daee4f01c4b54a3f4e689ab7f4504" name="a056daee4f01c4b54a3f4e689ab7f4504"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearTexture</b> (<a class="el" href="structTextureInfo.html">TextureInfo</a> &amp;info)</td></tr>
+<tr class="separator:a056daee4f01c4b54a3f4e689ab7f4504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f1dae3c2b598796cc3826ee48126ac7" id="r_a0f1dae3c2b598796cc3826ee48126ac7"><td class="memItemLeft" align="right" valign="top"><a id="a0f1dae3c2b598796cc3826ee48126ac7" name="a0f1dae3c2b598796cc3826ee48126ac7"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;, const <a class="el" href="structTextureInfo.html">TextureInfo</a> &amp;info)</td></tr>
+<tr class="separator:a0f1dae3c2b598796cc3826ee48126ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae1048b8c4d8c708bf4184cdb3e868cf" id="r_aae1048b8c4d8c708bf4184cdb3e868cf"><td class="memItemLeft" align="right" valign="top"><a id="aae1048b8c4d8c708bf4184cdb3e868cf" name="aae1048b8c4d8c708bf4184cdb3e868cf"></a>
+<a class="el" href="structTextureInfo.html">TextureInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>LoadTexture</b> (const std::string &amp;filename, const std::string &amp;texture_key)</td></tr>
+<tr class="separator:aae1048b8c4d8c708bf4184cdb3e868cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This header file defines the class <a class="el" href="classBallSystem.html">BallSystem</a>, the system the engine uses to move the ball, check what the ball has collided with, and update velocities, direction, and respawning.</p>
-<dl class="section author"><dt>Author</dt><dd>Tim Bishop </dd></dl>
+<div class="textblock"><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>Add description here </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_2b5be651b6c0a66b392f466b8aa97e51.html">gen-files</a></li><li class="navelem"><a class="el" href="dir_7921784d17ff334b07681a73ba3a02df.html">include</a></li><li class="navelem"><a class="el" href="dir_450a56ce39c1b14e93910210f236f753.html">ECS</a></li><li class="navelem"><a class="el" href="dir_717c789a020ece45a04b0d81572f4ec7.html">Systems</a></li><li class="navelem"><a class="el" href="BallSystem_8hpp.html">BallSystem.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_2b5be651b6c0a66b392f466b8aa97e51.html">gen-files</a></li><li class="navelem"><a class="el" href="dir_7921784d17ff334b07681a73ba3a02df.html">include</a></li><li class="navelem"><a class="el" href="dir_070eb8a5f9a1b8d81dbba7253d605114.html">Roc_GL</a></li><li class="navelem"><a class="el" href="Texture_8hpp.html">Texture.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

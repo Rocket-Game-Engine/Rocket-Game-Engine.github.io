@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rocket Game Engine: How a Rocket Application is laid out</title>
+<title>Rocket Game Engine: Your First Rocket Application</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript">var page_layout=1;</script>
 <script type="text/javascript" src="jquery.js"></script>
@@ -96,11 +96,129 @@ $(document).ready(function(){initNavTree('application_layout.html',''); initResi
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">How a Rocket Application is laid out</div></div>
+  <div class="headertitle"><div class="title">Your First Rocket Application</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="test_sec"></a>
-Under construction...</h1>
+<div class="textblock"><h1><a class="anchor" id="the_application"></a>
+The Application Class</h1>
+<dl class="section note"><dt>Note</dt><dd>Further documentation about the Application class can be found in the class' documentation page <a class="el" href="classApplication.html">here</a>.</dd></dl>
+<p>Rocket uses the <a class="el" href="classApplication.html">Application</a> class as a hook to enter the Engine. It is, in essence, the "main" function of any application. In the following examples, we will be using the classname "ApplicationSubClass" as this hypothetical Rocket application.</p>
+<h2><a class="anchor" id="subclassing_application"></a>
+Subclassing Application</h2>
+<p>The first thing most users should do is to subclass <a class="el" href="classApplication.html">Application</a>. The base class <a class="el" href="classApplication.html">Application</a> has one member that is very important to consider when making this subclass:</p><ul>
+<li><a class="el" href="classApplication.html#a5c149f7d5d6784f859d16df61960a27c">Application::m_currApp</a>: A static pointer to the currently running <a class="el" href="classApplication.html">Application</a>. This should be set to the app when it is created.</li>
+</ul>
+<p>The base constructor of <a class="el" href="classApplication.html">Application</a> will take care of the rest of the fields inside <a class="el" href="classApplication.html">Application</a>.</p>
+<p>There are a couple of ways of creating this <a class="el" href="classApplication.html">Application</a> subclass: 1) Design it such that the constructor is public, and inside said constructor initialize Components and Systems, as well as setting <code><a class="el" href="classApplication.html#a5c149f7d5d6784f859d16df61960a27c">Application::m_currApp</a> = this</code>. </p><div class="fragment"><div class="line"><span class="keyword">class </span>ApplicationSubClass : <span class="keyword">public</span> <a class="code hl_class" href="classApplication.html">Application</a></div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    ApplicationSubClass(<span class="keyword">const</span> std::string&amp; windowName, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height)</div>
+<div class="line">        :<a class="code hl_class" href="classApplication.html">Application</a>(windowName, width, height)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Initialize components and systems here</span></div>
+<div class="line">        m_currApp = <span class="keyword">this</span>;</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="ttc" id="aclassApplication_html"><div class="ttname"><a href="classApplication.html">Application</a></div><div class="ttdef"><b>Definition</b> Application.hpp:55</div></div>
+</div><!-- fragment --><p>2) Design it such that the constructor is private, only calling the base constructor, and do all the work, as well as returning a pointer to the newly created class, via a static member function. </p><div class="fragment"><div class="line"><span class="keyword">class </span>ApplicationSubClass : <span class="keyword">public</span> <a class="code hl_class" href="classApplication.html">Application</a></div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    ApplicationSubClass(<span class="keyword">const</span> std::string&amp; windowName, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height)</div>
+<div class="line">        :<a class="code hl_class" href="classApplication.html">Application</a>(windowName, width, height) {}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    ApplicationSubClass* <a class="code hl_function" href="classApplication.html#a20e7b40d2983b148ac53c84707379905">CreateApplication</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height)</div>
+<div class="line">    {</div>
+<div class="line">        ApplicationSubClass* app = <span class="keyword">new</span> ApplicationSubClass(name, width, height);</div>
+<div class="line">        <span class="keywordflow">if</span> (m_currApp != <span class="keyword">nullptr</span>)</div>
+<div class="line">            m_currApp-&gt;FreeApplication();</div>
+<div class="line">        <span class="comment">// Initialize components and systems here</span></div>
+<div class="line"> </div>
+<div class="line">        <a class="code hl_variable" href="classApplication.html#a5c149f7d5d6784f859d16df61960a27c">Application::m_currApp</a> = app;</div>
+<div class="line">        <span class="keywordflow">return</span> app;</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="ttc" id="aclassApplication_html_a20e7b40d2983b148ac53c84707379905"><div class="ttname"><a href="classApplication.html#a20e7b40d2983b148ac53c84707379905">Application::CreateApplication</a></div><div class="ttdeci">Application * CreateApplication(const std::string &amp;appName, int width, int height)</div></div>
+<div class="ttc" id="aclassApplication_html_a5c149f7d5d6784f859d16df61960a27c"><div class="ttname"><a href="classApplication.html#a5c149f7d5d6784f859d16df61960a27c">Application::m_currApp</a></div><div class="ttdeci">static Application * m_currApp</div><div class="ttdef"><b>Definition</b> Application.hpp:62</div></div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Of the two options, option 2 is preferred. It has more memory safety, as you can choose when to delete an application via FreeApplication(). Option 1 is a fine option for smaller projects where only 1 <a class="el" href="classApplication.html">Application</a> instance will <b>ever</b> be created. If multiple Applications are created while using option 1, unintended behaviour will commence.</dd></dl>
+<h2><a class="anchor" id="init_comps_and_systems"></a>
+Initializing Components and Systems</h2>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Perhaps make the macros for InitComponent and InitSystem not rely on the user defining <code>cd</code>?</dd></dl>
+<p>During the creation of an <a class="el" href="classApplication.html">Application</a>, you will need to initialize all the Components and Systems the app will need. All the shipped Components and Systems will be loaded during the base class <a class="el" href="classApplication.html">Application</a>'s constructor, but any user created ones will need to be loaded by the user.</p>
+<p>To aid in this, Rocket has provided two macros: InitComponent() and InitSystem(). These do approximately what you would expect: InitComponent() takes the name of a component and initializes it to the engine. InitSystem() does the same, but for Systems. To use these macros, the user must first include the line: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classCoordinator.html">Coordinator</a>* cd = Coordinator::Get();</div>
+<div class="ttc" id="aclassCoordinator_html"><div class="ttname"><a href="classCoordinator.html">Coordinator</a></div><div class="ttdef"><b>Definition</b> Coordinator.h:9</div></div>
+</div><!-- fragment --><p> These two macros rely on the definition of the variable <code>cd</code>.</p>
+<dl class="section note"><dt>Note</dt><dd>To learn more about the Coordinator, see its class page <a class="el" href="classCoordinator.html">here</a>.</dd></dl>
+<h2><a class="anchor" id="main_function"></a>
+The Main Function</h2>
+<p><a class="el" href="classApplication.html#ab404e626ddbbd2a59c94d58258f6f162">Application::Main()</a> is the only pure virtual function in the class. As such, it must be overridden in the subclass. <a class="el" href="classApplication.html#ab404e626ddbbd2a59c94d58258f6f162">Application::Main()</a> is, as the name implies, the main function of the <a class="el" href="classApplication.html">Application</a>. Inside it should be the per-frame logic of your application.</p>
+<p>Things to consider defining inside of Main are:</p><ul>
+<li>Framerate: Framerate is not managed by the engine, and is entirely on the programmer to implement, maintain, and edit as they see fit.</li>
+<li><p class="startli">Systems: During each frame, any number of systems can and should be called upon to add functionality to the app. Notable among these is the <a class="el" href="classRenderSpriteSystem.html">RenderSpriteSystem</a>, a part of the main engine, and the renderer of the app.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Remove the need for glfw calls in the main loop, that should be abstracted to the engine as a system or engine call of some kind.</dd></dl>
+</li>
+<li>glfwPollEvents() and glfwSwapBuffers(m_window): These two functions are currently needed to process events and update the window's graphics.</li>
+<li>Rscene loads: If you need to load a scene, the Main() function would be the time to do it.</li>
+</ul>
+<p>An example of a Main function could be the following: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> Main()<span class="keyword"> override</span></div>
+<div class="line"><span class="keyword"></span>{</div>
+<div class="line">    <span class="keywordtype">double</span> curr_time = glfwGetTime();</div>
+<div class="line">    <span class="keywordtype">double</span> prev_time = glfwGetTime();</div>
+<div class="line">    <span class="keywordtype">double</span> deltatime = 0;</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_class" href="classCoordinator.html">Coordinator</a>* cd = Coordinator::Get();</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_function" href="LoadRscene_8cpp.html#a1c5c70438301ce70eb028e5bba115125">LoadScene</a>(<span class="stringliteral">&quot;res/scene.rscene&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">while</span> (!glfwWindowShouldClose(m_window))</div>
+<div class="line">    {</div>
+<div class="line">        curr_time = glfwGetTime();</div>
+<div class="line">        deltatime = curr_time - prev_time;</div>
+<div class="line"> </div>
+<div class="line">        cd-&gt;GetSystem&lt;<a class="code hl_class" href="classCollisionSystem.html">CollisionSystem</a>&gt;()-&gt;Do();</div>
+<div class="line"> </div>
+<div class="line">        cd-&gt;GetSystem&lt;<a class="code hl_class" href="classCollisionSystem.html">CollisionSystem</a>&gt;()-&gt;Clear();</div>
+<div class="line"> </div>
+<div class="line">        glClearColor(0.0f, 0.0f, 0.0f, 0.0f);</div>
+<div class="line">        glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);</div>
+<div class="line">        cd-&gt;GetSystem&lt;<a class="code hl_class" href="classRenderSpriteSystem.html">RenderSpriteSystem</a>&gt;()-&gt;Do();</div>
+<div class="line"> </div>
+<div class="line">        glfwPollEvents();</div>
+<div class="line">        glfwSwapBuffers(m_window);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype">double</span> timediff = glfwGetTime() - curr_time;</div>
+<div class="line">        <span class="keywordtype">double</span> calculation = std::max((<span class="keywordtype">double</span>)(1.0 / m_framerate) - timediff, 0.0);</div>
+<div class="line">        usleep((<span class="keywordtype">int</span>)(calculation * 1000000.0));</div>
+<div class="line"> </div>
+<div class="line">        prev_time = curr_time;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aLoadRscene_8cpp_html_a1c5c70438301ce70eb028e5bba115125"><div class="ttname"><a href="LoadRscene_8cpp.html#a1c5c70438301ce70eb028e5bba115125">LoadScene</a></div><div class="ttdeci">void LoadScene(const std::string &amp;filepath)</div><div class="ttdef"><b>Definition</b> LoadRscene.cpp:53</div></div>
+<div class="ttc" id="aclassCollisionSystem_html"><div class="ttname"><a href="classCollisionSystem.html">CollisionSystem</a></div><div class="ttdef"><b>Definition</b> CollisionSystem.hpp:8</div></div>
+<div class="ttc" id="aclassRenderSpriteSystem_html"><div class="ttname"><a href="classRenderSpriteSystem.html">RenderSpriteSystem</a></div><div class="ttdef"><b>Definition</b> RenderSpriteSys.hpp:10</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="the_other_main"></a>
+The... other main function</h2>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Remove the dependency on <code>int main()</code>, the user should only have to worry about one Main function, and it should be inside the <a class="el" href="classApplication.html">Application</a> they just took so long to make :(</dd></dl>
+<p>Finally, we come to the main function... no the other one.</p>
+<p><code>int main()</code> still has a part to play in the engine, although a small one. It's responsible for initializing GLFW (the windowing backend Rocket uses) and creating and running the app we just made.</p>
+<p>An example of <code>int main()</code> could be the following: </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    LogTrace(<span class="stringliteral">&quot;Welcome to Rocket!&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (!glfwInit())</div>
+<div class="line">    {</div>
+<div class="line">        LogFatal(<span class="stringliteral">&quot;Could not initialize GLFW!&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    ApplicationSubClass* app = ApplicationSubClass::CreateApplication(<span class="stringliteral">&quot;test&quot;</span>, 1920, 1080);</div>
+<div class="line">    app-&gt;Main();</div>
+<div class="line">    app-&gt;FreeApplication();</div>
+<div class="line">    LogTrace(<span class="stringliteral">&quot;Rocket is done!&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="conclusion"></a>
+Conclusion</h1>
+<p>With that out of the way, you've made your first Application! You're well on your way to making a game or other project inside Rocket! </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

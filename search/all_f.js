@@ -7,7 +7,7 @@ var searchData=
   ['renderspritesystem_4',['RenderSpriteSystem',['../classRenderSpriteSystem.html',1,'']]],
   ['roc_5fecs_5fadditions_2ehpp_5',['Roc_ECS_Additions.hpp',['../Roc__ECS__Additions_8hpp.html',1,'']]],
   ['rocapplication_6',['RocApplication',['../classRocApplication.html',1,'']]],
-  ['rocket_20application_20is_20laid_20out_7',['How a Rocket Application is laid out',['../application_layout.html',1,'']]],
+  ['rocket_20application_7',['Your First Rocket Application',['../application_layout.html',1,'']]],
   ['rocket_20engine_20documentation_8',['The Rocket Engine Documentation',['../index.html',1,'']]],
   ['rocketkeyboard_9',['RocketKeyboard',['../structRocketKeyboard.html',1,'']]],
   ['roctests_10',['RocTests',['../classRocTests.html',1,'']]]

@@ -96,15 +96,148 @@ $(document).ready(function(){initNavTree('Keyboard_8cpp.html',''); initResizable
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">Keyboard.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Implementation for <a class="el" href="Keyboard_8hpp.html">Keyboard.hpp</a>.  
 <a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="Keyboard_8hpp_source.html">Base/Keyboard.hpp</a>&quot;</code><br />
+<code>#include &lt;boost/preprocessor/slot/counter.hpp&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a3b828214dc9e0a5403d2425dd354e189" id="r_a3b828214dc9e0a5403d2425dd354e189"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Keyboard_8cpp.html#a3b828214dc9e0a5403d2425dd354e189">INIT_KEY_PAIR</a>(z,  n,  data)&#160;&#160;&#160;{BOOST_PP_CAT(GLFW_KEY_, BOOST_PP_SEQ_ELEM(n, data)), RocketKey::BOOST_PP_SEQ_ELEM(n, data)}BOOST_PP_COMMA_IF(BOOST_PP_SUB(BOOST_PP_SUB(NUM_KEYS, 1), n))</td></tr>
+<tr class="separator:a3b828214dc9e0a5403d2425dd354e189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbf839beb937e7710a2cdfdb32105ee0" id="r_afbf839beb937e7710a2cdfdb32105ee0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Keyboard_8cpp.html#afbf839beb937e7710a2cdfdb32105ee0">INIT_STRING_PAIR</a>(z,  n,  data)&#160;&#160;&#160;{BOOST_PP_STRINGIZE(BOOST_PP_SEQ_ELEM(n, data)), RocketKey::BOOST_PP_SEQ_ELEM(n, data)}BOOST_PP_COMMA_IF(BOOST_PP_SUB(BOOST_PP_SUB(NUM_KEYS, 1), n))</td></tr>
+<tr class="separator:afbf839beb937e7710a2cdfdb32105ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a831a6f1ab69fa8e68ebc202e46dd9893" id="r_a831a6f1ab69fa8e68ebc202e46dd9893"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Keyboard_8cpp.html#a831a6f1ab69fa8e68ebc202e46dd9893">INIT_KEY_MAP</a>&#160;&#160;&#160;BOOST_PP_REPEAT(BOOST_PP_SUB(NUM_KEYS, 1), <a class="el" href="Keyboard_8cpp.html#a3b828214dc9e0a5403d2425dd354e189">INIT_KEY_PAIR</a>, BOOST_PP_VARIADIC_TO_SEQ(ALL_KEYS))</td></tr>
+<tr class="separator:a831a6f1ab69fa8e68ebc202e46dd9893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a507368fa37d3c123c55cfe447b09112d" id="r_a507368fa37d3c123c55cfe447b09112d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Keyboard_8cpp.html#a507368fa37d3c123c55cfe447b09112d">INIT_STRING_MAP</a>&#160;&#160;&#160;BOOST_PP_REPEAT(BOOST_PP_SUB(NUM_KEYS, 1), <a class="el" href="Keyboard_8cpp.html#afbf839beb937e7710a2cdfdb32105ee0">INIT_STRING_PAIR</a>, BOOST_PP_VARIADIC_TO_SEQ(ALL_KEYS))</td></tr>
+<tr class="separator:a507368fa37d3c123c55cfe447b09112d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation for <a class="el" href="Keyboard_8hpp.html">Keyboard.hpp</a>. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a831a6f1ab69fa8e68ebc202e46dd9893" name="a831a6f1ab69fa8e68ebc202e46dd9893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a831a6f1ab69fa8e68ebc202e46dd9893">&#9670;&#160;</a></span>INIT_KEY_MAP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INIT_KEY_MAP&#160;&#160;&#160;BOOST_PP_REPEAT(BOOST_PP_SUB(NUM_KEYS, 1), <a class="el" href="Keyboard_8cpp.html#a3b828214dc9e0a5403d2425dd354e189">INIT_KEY_PAIR</a>, BOOST_PP_VARIADIC_TO_SEQ(ALL_KEYS))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes all map values for GLFW_KEY -&gt; RocketKey map </p>
+
+</div>
+</div>
+<a id="a3b828214dc9e0a5403d2425dd354e189" name="a3b828214dc9e0a5403d2425dd354e189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b828214dc9e0a5403d2425dd354e189">&#9670;&#160;</a></span>INIT_KEY_PAIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INIT_KEY_PAIR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">z, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;{BOOST_PP_CAT(GLFW_KEY_, BOOST_PP_SEQ_ELEM(n, data)), RocketKey::BOOST_PP_SEQ_ELEM(n, data)}BOOST_PP_COMMA_IF(BOOST_PP_SUB(BOOST_PP_SUB(NUM_KEYS, 1), n))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Macro for defining a GLFW_KEY -&gt; RocketKey pair for a map initializer list.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">z</td><td>??? </td></tr>
+    <tr><td class="paramname">n</td><td>The iteration count </td></tr>
+    <tr><td class="paramname">data</td><td>The data passed into the macro (usually the whole sequence) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a507368fa37d3c123c55cfe447b09112d" name="a507368fa37d3c123c55cfe447b09112d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a507368fa37d3c123c55cfe447b09112d">&#9670;&#160;</a></span>INIT_STRING_MAP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INIT_STRING_MAP&#160;&#160;&#160;BOOST_PP_REPEAT(BOOST_PP_SUB(NUM_KEYS, 1), <a class="el" href="Keyboard_8cpp.html#afbf839beb937e7710a2cdfdb32105ee0">INIT_STRING_PAIR</a>, BOOST_PP_VARIADIC_TO_SEQ(ALL_KEYS))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes all map values for std::string -&gt; RocketKey map </p>
+
+</div>
+</div>
+<a id="afbf839beb937e7710a2cdfdb32105ee0" name="afbf839beb937e7710a2cdfdb32105ee0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbf839beb937e7710a2cdfdb32105ee0">&#9670;&#160;</a></span>INIT_STRING_PAIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INIT_STRING_PAIR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">z, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;{BOOST_PP_STRINGIZE(BOOST_PP_SEQ_ELEM(n, data)), RocketKey::BOOST_PP_SEQ_ELEM(n, data)}BOOST_PP_COMMA_IF(BOOST_PP_SUB(BOOST_PP_SUB(NUM_KEYS, 1), n))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Macro for defining a std::string -&gt; RocketKey pair for a map initializer list.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">z</td><td>??? </td></tr>
+    <tr><td class="paramname">n</td><td>The iteration count </td></tr>
+    <tr><td class="paramname">data</td><td>The data passed into the macro (usually the whole sequence) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

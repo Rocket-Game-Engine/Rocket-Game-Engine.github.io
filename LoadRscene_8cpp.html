@@ -97,6 +97,7 @@ $(document).ready(function(){initNavTree('LoadRscene_8cpp.html',''); initResizab
 
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">LoadRscene.cpp File Reference</div></div>
 </div><!--header-->
@@ -104,7 +105,13 @@ $(document).ready(function(){initNavTree('LoadRscene_8cpp.html',''); initResizab
 
 <p>Implementation for <a class="el" href="LoadRscene_8hpp.html">LoadRscene.hpp</a>.  
 <a href="#details">More...</a></p>
-<table class="memberdecls">
+<div class="textblock"><code>#include &quot;<a class="el" href="LoadRscene_8hpp_source.html">LoadRscene.hpp</a>&quot;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &quot;stb_c_lexer.h&quot;</code><br />
+<code>#include &quot;RocLogger/RocLogger.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="Keyboard_8hpp_source.html">Base/Keyboard.hpp</a>&quot;</code><br />
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a3a0e935d53bcbcb5a717d673e37bd9b9" id="r_a3a0e935d53bcbcb5a717d673e37bd9b9"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LoadRscene_8cpp.html#a3a0e935d53bcbcb5a717d673e37bd9b9">GetNextString</a> (stb_lexer &amp;lex)</td></tr>
@@ -185,7 +192,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Call this function to load a scene into the game engine. Ensure that the format of the scene file is correct, or there will be errors.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>Add more thorough error checking for syntax</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>Add more thorough error checking for syntax</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filepath</td><td>The relative path to the scene file to load </td></tr>

@@ -16,6 +16,8 @@ var searchData=
   ['shadermap_13',['ShaderMap',['../classShaders.html#a1c3b02d7e401d214f9b8aec351e19e59',1,'Shaders']]],
   ['shaders_14',['Shaders',['../classShaders.html',1,'']]],
   ['sprite_15',['Sprite',['../classSprite.html',1,'']]],
-  ['system_16',['system',['../classSystem.html',1,'System'],['../coordsystem.html',1,'The Coordinate System']]],
-  ['systemmanager_17',['SystemManager',['../classSystemManager.html',1,'']]]
+  ['subclassing_20application_16',['Subclassing Application',['../application_layout.html#subclassing_application',1,'']]],
+  ['system_17',['system',['../classSystem.html',1,'System'],['../coordsystem.html',1,'The Coordinate System']]],
+  ['systemmanager_18',['SystemManager',['../classSystemManager.html',1,'']]],
+  ['systems_19',['systems',['../application_layout.html#init_comps_and_systems',1,'Initializing Components and Systems'],['../todo.html#_todo000002',1,'Initializing Components and Systems']]]
 ];

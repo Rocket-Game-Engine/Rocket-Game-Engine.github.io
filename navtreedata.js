@@ -26,10 +26,16 @@ var NAVTREE =
 [
   [ "Rocket Game Engine", "index.html", [
     [ "The Rocket Engine Documentation", "index.html", "index" ],
-    [ "The Coordinate System", "coordsystem.html", null ],
-    [ "How a Rocket Application is laid out", "application_layout.html", [
-      [ "Under construction...", "application_layout.html#test_sec", null ]
+    [ "Your First Rocket Application", "application_layout.html", [
+      [ "The Application Class", "application_layout.html#the_application", [
+        [ "Subclassing Application", "application_layout.html#subclassing_application", null ],
+        [ "Initializing Components and Systems", "application_layout.html#init_comps_and_systems", null ],
+        [ "The Main Function", "application_layout.html#main_function", null ],
+        [ "The... other main function", "application_layout.html#the_other_main", null ]
+      ] ],
+      [ "Conclusion", "application_layout.html#conclusion", null ]
     ] ],
+    [ "The Coordinate System", "coordsystem.html", null ],
     [ "Todo List", "todo.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -45,7 +51,8 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ]
+        [ "Functions", "globals_func.html", null ],
+        [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
