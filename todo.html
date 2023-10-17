@@ -100,30 +100,38 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
+<dt>Member <a class="el" href="Texture_8cpp.html#a056daee4f01c4b54a3f4e689ab7f4504">ClearTexture</a>  (<a class="el" href="structTextureInfo.html">TextureInfo</a> &amp;info)</dt>
+<dd><a class="anchor" id="_todo000012"></a>why is this redefinition here??  </dd>
 <dt>Member <a class="el" href="classComponentArray.html#a45517d620d2385c5f93978e6b2e1a620">ComponentArray&lt; T &gt;::GetData</a>  (Entity entity)</dt>
-<dd><a class="anchor" id="_todo000013"></a>PLEASE FIX THIS, I HATE THIS CODE  </dd>
+<dd><a class="anchor" id="_todo000017"></a>PLEASE FIX THIS, I HATE THIS CODE  </dd>
 <dt>Member <a class="el" href="classComponentManager.html#a5ea1997bd0256e94b604b8ce8cd2a2d3">ComponentManager::GetComponent</a>  (Entity entity)</dt>
-<dd><a class="anchor" id="_todo000012"></a>AGAIN PLEASE FIX, I HATE ASSERTS IN REAL CODE  </dd>
+<dd><a class="anchor" id="_todo000016"></a>AGAIN PLEASE FIX, I HATE ASSERTS IN REAL CODE  </dd>
 <dt>Class <a class="el" href="structCoordinateSystem.html">CoordinateSystem</a>  </dt>
 <dd><a class="anchor" id="_todo000007"></a>Remove this class and its properties, they serve zero function to the overall design of the engine.  </dd>
 <dt>File <a class="el" href="LoadRscene_8hpp.html">LoadRscene.hpp</a>  </dt>
-<dd><a class="anchor" id="_todo000010"></a>Come up with a better name than RScene... Current frontrunners are "Liftoff" and "Arsene" </dd>
+<dd><a class="anchor" id="_todo000014"></a>Come up with a better name than RScene... Current frontrunners are "Liftoff" and "Arsene" </dd>
 <dt>Member <a class="el" href="LoadRscene_8hpp.html#a1c5c70438301ce70eb028e5bba115125">LoadScene</a>  (const std::string &amp;filepath)</dt>
-<dd><a class="anchor" id="_todo000011"></a>Add more thorough error checking for syntax </dd>
+<dd><a class="anchor" id="_todo000015"></a>Add more thorough error checking for syntax </dd>
 <dt>Member <a class="el" href="classPaddleControls.html#a6c080942803bed34d56833ad18e86087">PaddleControls::Do</a>  (GLFWwindow *win)</dt>
 <dd><p class="startdd"><a class="anchor" id="_todo000005"></a>Add deltatime to this function, it really should be tied to the framerate.</p>
 <p class="enddd"><a class="anchor" id="_todo000006"></a>Remove GLFWwindow* from arguments list, now that the keyboard works correctly, we don't need it. </p>
 </dd>
+<dt>File <a class="el" href="Shader_8hpp.html">Shader.hpp</a>  </dt>
+<dd><a class="anchor" id="_todo000008"></a>Maybe load in a default shader (currently "sprite_shader") for users that don't want/need any custom shaders. </dd>
 <dt>Class <a class="el" href="classShaders.html">Shaders</a>  </dt>
-<dd><a class="anchor" id="_todo000008"></a>Add direct accessor to the class so we don't have to write <a class="el" href="classShaders.html#a1c3b02d7e401d214f9b8aec351e19e59">Shaders::ShaderMap</a>[key]. </dd>
-<dt>File <a class="el" href="Texture_8hpp.html">Texture.hpp</a>  </dt>
-<dd><a class="anchor" id="_todo000009"></a>Add description here  </dd>
+<dd><a class="anchor" id="_todo000009"></a>Add direct accessor to the class so we don't have to write <a class="el" href="classShaders.html#a1c3b02d7e401d214f9b8aec351e19e59">Shaders::ShaderMap</a>[key]. </dd>
+<dt>Class <a class="el" href="classTexInfoHash.html">TexInfoHash</a>  </dt>
+<dd><a class="anchor" id="_todo000010"></a>Remove this class, it's never used and now serves no purpose.  </dd>
+<dt>Member <a class="el" href="classTextureHashMap.html#ae94e4420e49568f8ddecd478d85f5d0d">TextureHashMap::PrintHashMap</a>  ()</dt>
+<dd><a class="anchor" id="_todo000013"></a>remove this, or lock it behind a define  </dd>
+<dt>Class <a class="el" href="classTextures.html">Textures</a>  </dt>
+<dd><a class="anchor" id="_todo000011"></a>Add a way to directly access the <a class="el" href="structTextureInfo.html">TextureInfo</a> objects inside TextureMap so we don't have to constantly write out "Textures::TextureMap".  </dd>
 <dt>page <a class="el" href="index.html">The Rocket Engine Documentation</a>  </dt>
 <dd><a class="anchor" id="_todo000001"></a>Add <a class="el" href="classSystem.html">System</a> page </dd>
 <dt>Page <a class="el" href="application_layout.html">Your First Rocket Application</a>  </dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000002"></a>Perhaps make the macros for InitComponent and InitSystem not rely on the user defining <code>cd</code>?</p>
+<dd><p class="startdd"><a class="anchor" id="_todo000004"></a>Remove the dependency on <code>int main()</code>, the user should only have to worry about one Main function, and it should be inside the <a class="el" href="classApplication.html">Application</a> they just took so long to make :(</p>
 <p class="interdd"><a class="anchor" id="_todo000003"></a>Remove the need for glfw calls in the main loop, that should be abstracted to the engine as a system or engine call of some kind.</p>
-<p class="enddd"><a class="anchor" id="_todo000004"></a>Remove the dependency on <code>int main()</code>, the user should only have to worry about one Main function, and it should be inside the <a class="el" href="classApplication.html">Application</a> they just took so long to make :(</p>
+<p class="enddd"><a class="anchor" id="_todo000002"></a>Perhaps make the macros for InitComponent and InitSystem not rely on the user defining <code>cd</code>?</p>
 </dd>
 </dl>
 </div></div><!-- contents -->

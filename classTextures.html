@@ -103,19 +103,73 @@ $(document).ready(function(){initNavTree('classTextures.html',''); initResizable
   <div class="headertitle"><div class="title">Textures Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Texture_8hpp_source.html">Texture.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a2fcd9a2c4da7af8c8ca03cb9435f2b37" id="r_a2fcd9a2c4da7af8c8ca03cb9435f2b37"><td class="memItemLeft" align="right" valign="top"><a id="a2fcd9a2c4da7af8c8ca03cb9435f2b37" name="a2fcd9a2c4da7af8c8ca03cb9435f2b37"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+<tr class="memitem:a2fcd9a2c4da7af8c8ca03cb9435f2b37" id="r_a2fcd9a2c4da7af8c8ca03cb9435f2b37"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTextures.html#a2fcd9a2c4da7af8c8ca03cb9435f2b37">clear</a> ()</td></tr>
 <tr class="separator:a2fcd9a2c4da7af8c8ca03cb9435f2b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a13347110843a524109b6838736a01ef2" id="r_a13347110843a524109b6838736a01ef2"><td class="memItemLeft" align="right" valign="top"><a id="a13347110843a524109b6838736a01ef2" name="a13347110843a524109b6838736a01ef2"></a>
-static <a class="el" href="classTextureHashMap.html">TextureHashMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>TextureMap</b></td></tr>
+<tr class="memitem:a13347110843a524109b6838736a01ef2" id="r_a13347110843a524109b6838736a01ef2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classTextureHashMap.html">TextureHashMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTextures.html#a13347110843a524109b6838736a01ef2">TextureMap</a></td></tr>
 <tr class="separator:a13347110843a524109b6838736a01ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This is a wrapper class for a static <a class="el" href="classTextureHashMap.html">TextureHashMap</a>. This is where any textures loaded will end up being stored for further use.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>Add a way to directly access the <a class="el" href="structTextureInfo.html">TextureInfo</a> objects inside TextureMap so we don't have to constantly write out "Textures::TextureMap". </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2fcd9a2c4da7af8c8ca03cb9435f2b37" name="a2fcd9a2c4da7af8c8ca03cb9435f2b37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fcd9a2c4da7af8c8ca03cb9435f2b37">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Textures::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Clears the contents of the internal hashmap, effectively unloading every texture known to the engine. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a13347110843a524109b6838736a01ef2" name="a13347110843a524109b6838736a01ef2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13347110843a524109b6838736a01ef2">&#9670;&#160;</a></span>TextureMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTextureHashMap.html">TextureHashMap</a> Textures::TextureMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The <a class="el" href="classTextureHashMap.html">TextureHashMap</a> where all textures will be stored. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>gen-files/include/Roc_GL/<a class="el" href="Texture_8hpp_source.html">Texture.hpp</a></li>
 <li>gen-files/src/Roc_GL/<a class="el" href="Texture_8cpp.html">Texture.cpp</a></li>

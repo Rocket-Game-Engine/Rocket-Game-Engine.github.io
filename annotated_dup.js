@@ -29,8 +29,8 @@ var annotated_dup =
     [ "System", "classSystem.html", null ],
     [ "SystemManager", "classSystemManager.html", null ],
     [ "TexInfoHash", "classTexInfoHash.html", null ],
-    [ "TextureHashMap", "classTextureHashMap.html", null ],
-    [ "TextureInfo", "structTextureInfo.html", null ],
+    [ "TextureHashMap", "classTextureHashMap.html", "classTextureHashMap" ],
+    [ "TextureInfo", "structTextureInfo.html", "structTextureInfo" ],
     [ "Textures", "classTextures.html", null ],
     [ "Transform", "classTransform.html", null ]
 ];

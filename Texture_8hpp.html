@@ -124,19 +124,82 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a056daee4f01c4b54a3f4e689ab7f4504" id="r_a056daee4f01c4b54a3f4e689ab7f4504"><td class="memItemLeft" align="right" valign="top"><a id="a056daee4f01c4b54a3f4e689ab7f4504" name="a056daee4f01c4b54a3f4e689ab7f4504"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearTexture</b> (<a class="el" href="structTextureInfo.html">TextureInfo</a> &amp;info)</td></tr>
+<tr class="memitem:a056daee4f01c4b54a3f4e689ab7f4504" id="r_a056daee4f01c4b54a3f4e689ab7f4504"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Texture_8hpp.html#a056daee4f01c4b54a3f4e689ab7f4504">ClearTexture</a> (<a class="el" href="structTextureInfo.html">TextureInfo</a> &amp;info)</td></tr>
 <tr class="separator:a056daee4f01c4b54a3f4e689ab7f4504"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f1dae3c2b598796cc3826ee48126ac7" id="r_a0f1dae3c2b598796cc3826ee48126ac7"><td class="memItemLeft" align="right" valign="top"><a id="a0f1dae3c2b598796cc3826ee48126ac7" name="a0f1dae3c2b598796cc3826ee48126ac7"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;, const <a class="el" href="structTextureInfo.html">TextureInfo</a> &amp;info)</td></tr>
 <tr class="separator:a0f1dae3c2b598796cc3826ee48126ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae1048b8c4d8c708bf4184cdb3e868cf" id="r_aae1048b8c4d8c708bf4184cdb3e868cf"><td class="memItemLeft" align="right" valign="top"><a id="aae1048b8c4d8c708bf4184cdb3e868cf" name="aae1048b8c4d8c708bf4184cdb3e868cf"></a>
-<a class="el" href="structTextureInfo.html">TextureInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>LoadTexture</b> (const std::string &amp;filename, const std::string &amp;texture_key)</td></tr>
+<tr class="memitem:aae1048b8c4d8c708bf4184cdb3e868cf" id="r_aae1048b8c4d8c708bf4184cdb3e868cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structTextureInfo.html">TextureInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Texture_8hpp.html#aae1048b8c4d8c708bf4184cdb3e868cf">LoadTexture</a> (const std::string &amp;filename, const std::string &amp;texture_key)</td></tr>
 <tr class="separator:aae1048b8c4d8c708bf4184cdb3e868cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>Add description here </dd></dl>
-</div></div><!-- contents -->
+<div class="textblock"><p>This file contains all the classes and functions revolving around textures. The end user mostly won't work with textures except through loading them via Rscene and accessing the <a class="el" href="structTextureInfo.html">TextureInfo</a> of textures. Outside of that, the <a class="el" href="classSprite.html">Sprite</a> component usually takes care of the rendering automatically.</p>
+<dl class="section author"><dt>Author</dt><dd>Tim Bishop </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a056daee4f01c4b54a3f4e689ab7f4504" name="a056daee4f01c4b54a3f4e689ab7f4504"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a056daee4f01c4b54a3f4e689ab7f4504">&#9670;&#160;</a></span>ClearTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structTextureInfo.html">TextureInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Takes a reference to a <a class="el" href="structTextureInfo.html">TextureInfo</a> struct, unloads the attached OpenGL texture, and reverts all of its data members back to their defaults, effectively clearing the texture from the engine.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">info</td><td>The <a class="el" href="structTextureInfo.html">TextureInfo</a> object to nullify</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>why is this redefinition here?? </dd></dl>
+
+</div>
+</div>
+<a id="aae1048b8c4d8c708bf4184cdb3e868cf" name="aae1048b8c4d8c708bf4184cdb3e868cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae1048b8c4d8c708bf4184cdb3e868cf">&#9670;&#160;</a></span>LoadTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structTextureInfo.html">TextureInfo</a> LoadTexture </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>texture_key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This is how the user is intended to load a texture into Rocket. It will be loaded from the filename (a path relative to the location the app was called from) and store the generated <a class="el" href="structTextureInfo.html">TextureInfo</a> object into <a class="el" href="classTextures.html#a13347110843a524109b6838736a01ef2">Textures::TextureMap</a>. Then, it will return the <a class="el" href="structTextureInfo.html">TextureInfo</a> object.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>A relative path detailing where to find the texture the engine should load. </td></tr>
+    <tr><td class="paramname">texture_key</td><td>The unique identifier of the texture to load.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The newly generated <a class="el" href="structTextureInfo.html">TextureInfo</a> object </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
