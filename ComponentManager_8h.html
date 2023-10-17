@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rocket Game Engine: gen-files/include/RScene/LoadRscene.hpp Source File</title>
+<title>Rocket Game Engine: gen-files/vendor/Roc_ECS/include/ComponentManager.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript">var page_layout=1;</script>
 <script type="text/javascript" src="jquery.js"></script>
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('LoadRscene_8hpp_source.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('ComponentManager_8h.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -96,27 +96,36 @@ $(document).ready(function(){initNavTree('LoadRscene_8hpp_source.html',''); init
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">LoadRscene.hpp</div></div>
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a>  </div>
+  <div class="headertitle"><div class="title">ComponentManager.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="LoadRscene_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="Roc__ECS__Additions_8hpp.html">ECS/Roc_ECS_Additions.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="CoordinateSystem_8hpp.html">Roc_GL/CoordinateSystem.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="Shader_8hpp.html">Roc_GL/Shader.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="Texture_8hpp.html">Roc_GL/Texture.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> <a class="code hl_function" href="LoadRscene_8hpp.html#a1c5c70438301ce70eb028e5bba115125">LoadScene</a>(<span class="keyword">const</span> std::string&amp; filepath);</div>
-<div class="ttc" id="aCoordinateSystem_8hpp_html"><div class="ttname"><a href="CoordinateSystem_8hpp.html">CoordinateSystem.hpp</a></div></div>
-<div class="ttc" id="aLoadRscene_8hpp_html_a1c5c70438301ce70eb028e5bba115125"><div class="ttname"><a href="LoadRscene_8hpp.html#a1c5c70438301ce70eb028e5bba115125">LoadScene</a></div><div class="ttdeci">void LoadScene(const std::string &amp;filepath)</div><div class="ttdef"><b>Definition</b> LoadRscene.cpp:53</div></div>
-<div class="ttc" id="aRoc__ECS__Additions_8hpp_html"><div class="ttname"><a href="Roc__ECS__Additions_8hpp.html">Roc_ECS_Additions.hpp</a></div></div>
-<div class="ttc" id="aShader_8hpp_html"><div class="ttname"><a href="Shader_8hpp.html">Shader.hpp</a></div></div>
-<div class="ttc" id="aTexture_8hpp_html"><div class="ttname"><a href="Texture_8hpp.html">Texture.hpp</a></div></div>
-</div><!-- fragment --></div><!-- contents -->
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;RocLogger/RocLogger.hpp&quot;</code><br />
+<code>#include &quot;IComponentArray.h&quot;</code><br />
+</div>
+<p><a href="ComponentManager_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponentManager.html">ComponentManager</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This file defines the class <a class="el" href="classComponentManager.html">ComponentManager</a>, a class explicitly designed to store and keep track of the <a class="el" href="classComponent.html">Component</a> objects created and attached to Entities.</p>
+<dl class="section note"><dt>Note</dt><dd>This, and most base ECS classes, were adapted from <a href="https://austinmorlan.com/posts/entity_component_system/">Austin Morlan's amazing ECS writeup here.</a></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000020">Todo:</a></b></dt><dd>A LOT of these functions could use a cleanup, especially in the error checking department.</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Tim Bishop </dd></dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_2b5be651b6c0a66b392f466b8aa97e51.html">gen-files</a></li><li class="navelem"><a class="el" href="dir_7921784d17ff334b07681a73ba3a02df.html">include</a></li><li class="navelem"><a class="el" href="dir_a997f9ca84f63de9eec384f9787d8601.html">RScene</a></li><li class="navelem"><a class="el" href="LoadRscene_8hpp.html">LoadRscene.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_2b5be651b6c0a66b392f466b8aa97e51.html">gen-files</a></li><li class="navelem"><a class="el" href="dir_2658788ef9bf36c228b8d2d85d0122c5.html">vendor</a></li><li class="navelem"><a class="el" href="dir_72cebb3e19d52c70b7a2b5c9d4b5fdfb.html">Roc_ECS</a></li><li class="navelem"><a class="el" href="dir_a0e3b412bf035b5c1db2a0288aee3f8a.html">include</a></li><li class="navelem"><a class="el" href="ComponentManager_8h.html">ComponentManager.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

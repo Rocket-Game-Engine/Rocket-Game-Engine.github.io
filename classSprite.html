@@ -99,6 +99,7 @@ $(document).ready(function(){initNavTree('classSprite.html',''); initResizable()
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classSprite-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Sprite Class Reference</div></div>
@@ -137,6 +138,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>__set_height</b> (Pro
 <tr class="memitem:a8462369530380c2c1316644466f514b9" id="r_a8462369530380c2c1316644466f514b9"><td class="memItemLeft" align="right" valign="top"><a id="a8462369530380c2c1316644466f514b9" name="a8462369530380c2c1316644466f514b9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>__set_VBO</b> (Property p)</td></tr>
 <tr class="separator:a8462369530380c2c1316644466f514b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32ff910e6bde885af48f1f0fa3e8e274" id="r_a32ff910e6bde885af48f1f0fa3e8e274"><td class="memItemLeft" align="right" valign="top"><a id="a32ff910e6bde885af48f1f0fa3e8e274" name="a32ff910e6bde885af48f1f0fa3e8e274"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetOutputData</b> (double thisx, double thisy)</td></tr>
+<tr class="separator:a32ff910e6bde885af48f1f0fa3e8e274"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9a3aabf8daefeab9c17315237cedfc7" id="r_ae9a3aabf8daefeab9c17315237cedfc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#ae9a3aabf8daefeab9c17315237cedfc7">DestroyComponent</a> () override</td></tr>
+<tr class="separator:ae9a3aabf8daefeab9c17315237cedfc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0bcfa915b97234445fb68bcf8ca46ed" id="r_ad0bcfa915b97234445fb68bcf8ca46ed"><td class="memItemLeft" align="right" valign="top"><a id="ad0bcfa915b97234445fb68bcf8ca46ed" name="ad0bcfa915b97234445fb68bcf8ca46ed"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Sprite</b> (const <a class="el" href="classSprite.html">Sprite</a> &amp;cpy)</td></tr>
 <tr class="separator:ad0bcfa915b97234445fb68bcf8ca46ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,15 +150,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>__set_VBO</b> (Proper
 <a class="el" href="classSprite.html">Sprite</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classSprite.html">Sprite</a> &amp;cpy)</td></tr>
 <tr class="separator:ac0ade5a15e2ab70d199cdf9fb496fdee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classComponent"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classComponent')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classComponent.html">Component</a></td></tr>
-<tr class="memitem:aeb52c63523aaa0c423df656b41ae9386 inherit pub_methods_classComponent" id="r_aeb52c63523aaa0c423df656b41ae9386"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>Component</b> (bool null=false)</td></tr>
+<tr class="memitem:aeb52c63523aaa0c423df656b41ae9386 inherit pub_methods_classComponent" id="r_aeb52c63523aaa0c423df656b41ae9386"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#aeb52c63523aaa0c423df656b41ae9386">Component</a> (bool null=false)</td></tr>
 <tr class="separator:aeb52c63523aaa0c423df656b41ae9386 inherit pub_methods_classComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a610d1ac1407436a7fd23c2e89a9bd592 inherit pub_methods_classComponent" id="r_a610d1ac1407436a7fd23c2e89a9bd592"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isNull</b> ()</td></tr>
 <tr class="separator:a610d1ac1407436a7fd23c2e89a9bd592 inherit pub_methods_classComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acce54c4b15a14b6acc49de8309ae87e7 inherit pub_methods_classComponent" id="r_acce54c4b15a14b6acc49de8309ae87e7"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>DestroyComponent</b> ()</td></tr>
-<tr class="separator:acce54c4b15a14b6acc49de8309ae87e7 inherit pub_methods_classComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -160,21 +162,68 @@ Static Public Member Functions</h2></td></tr>
 static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> ()</td></tr>
 <tr class="separator:af426b3b2a690ee8e580dbdd918d28415"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ac2685c52578cdffa305a3b27473ff43d" id="r_ac2685c52578cdffa305a3b27473ff43d"><td class="memItemLeft" align="right" valign="top"><a id="ac2685c52578cdffa305a3b27473ff43d" name="ac2685c52578cdffa305a3b27473ff43d"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>texture_key</b> = &quot;&quot;</td></tr>
+<tr class="separator:ac2685c52578cdffa305a3b27473ff43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb7efd920fb8594e2c73b29bf71b9b25" id="r_acb7efd920fb8594e2c73b29bf71b9b25"><td class="memItemLeft" align="right" valign="top"><a id="acb7efd920fb8594e2c73b29bf71b9b25" name="acb7efd920fb8594e2c73b29bf71b9b25"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>shader_key</b> = &quot;&quot;</td></tr>
+<tr class="separator:acb7efd920fb8594e2c73b29bf71b9b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa84caa94b226e7fbacee7e4994a823a8" id="r_aa84caa94b226e7fbacee7e4994a823a8"><td class="memItemLeft" align="right" valign="top"><a id="aa84caa94b226e7fbacee7e4994a823a8" name="aa84caa94b226e7fbacee7e4994a823a8"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>offsetX</b> = 0.0</td></tr>
+<tr class="separator:aa84caa94b226e7fbacee7e4994a823a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20014b2b0802be2860e02b3127b7deeb" id="r_a20014b2b0802be2860e02b3127b7deeb"><td class="memItemLeft" align="right" valign="top"><a id="a20014b2b0802be2860e02b3127b7deeb" name="a20014b2b0802be2860e02b3127b7deeb"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>offsetY</b> = 0.0</td></tr>
+<tr class="separator:a20014b2b0802be2860e02b3127b7deeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11f560edfc52252310a1d1926c35e624" id="r_a11f560edfc52252310a1d1926c35e624"><td class="memItemLeft" align="right" valign="top"><a id="a11f560edfc52252310a1d1926c35e624" name="a11f560edfc52252310a1d1926c35e624"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>width</b> = 0.0</td></tr>
+<tr class="separator:a11f560edfc52252310a1d1926c35e624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a064ac3cdbeaab442437614b89cc3fbdf" id="r_a064ac3cdbeaab442437614b89cc3fbdf"><td class="memItemLeft" align="right" valign="top"><a id="a064ac3cdbeaab442437614b89cc3fbdf" name="a064ac3cdbeaab442437614b89cc3fbdf"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>height</b> = 0.0</td></tr>
+<tr class="separator:a064ac3cdbeaab442437614b89cc3fbdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classComponent"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classComponent')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classComponent.html">Component</a></td></tr>
+<tr class="memitem:a20467d04514587ec8aa96a1fae456dd2 inherit pub_attribs_classComponent" id="r_a20467d04514587ec8aa96a1fae456dd2"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::function&lt; void(Property)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#a20467d04514587ec8aa96a1fae456dd2">_setters</a></td></tr>
+<tr class="separator:a20467d04514587ec8aa96a1fae456dd2 inherit pub_attribs_classComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a9d8f47878d1c4fb6f20066149d97e475" id="r_a9d8f47878d1c4fb6f20066149d97e475"><td class="memItemLeft" align="right" valign="top"><a id="a9d8f47878d1c4fb6f20066149d97e475" name="a9d8f47878d1c4fb6f20066149d97e475"></a>
-BOOST_PP_REM(friend class <a class="el" href="classRenderSpriteSystem.html">RenderSpriteSystem</a>;) BOOST_PP_REM(public BOOST_PP_REM(public:std::string shader_key=&quot;&quot;;) BOOST_PP_REM(public BOOST_PP_REM(public:double offsetY=0.0;) BOOST_PP_REM(public BOOST_PP_REM(public:double height=0.0;) BOOST_PP_REM(public BOOST_PP_REM(public:void DestroyComponent() override;) BOOST_PP_REM(private&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_PP_REM</b> (private:double vertices[30]={ 0, 0, 0.0f, 1.0f, 0.0f, 0, 0, 0.0f, 0.0f, 0.0f, 0, 0, 0.0f, 0.0f, 1.0f, 0, 0, 0.0f, 1.0f, 0.0f, 0, 0, 0.0f, 0.0f, 1.0f, 0, 0, 0.0f, 1.0f, 1.0f };) public</td></tr>
-<tr class="separator:a9d8f47878d1c4fb6f20066149d97e475"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_attribs_classComponent"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classComponent')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classComponent.html">Component</a></td></tr>
-<tr class="memitem:a20467d04514587ec8aa96a1fae456dd2 inherit pub_attribs_classComponent" id="r_a20467d04514587ec8aa96a1fae456dd2"><td class="memItemLeft" align="right" valign="top">
-std::map&lt; std::string, std::function&lt; void(Property)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_setters</b></td></tr>
-<tr class="separator:a20467d04514587ec8aa96a1fae456dd2 inherit pub_attribs_classComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cf0d114180ed230fe8f71a1910ea95a" id="r_a5cf0d114180ed230fe8f71a1910ea95a"><td class="memItemLeft" align="right" valign="top"><a id="a5cf0d114180ed230fe8f71a1910ea95a" name="a5cf0d114180ed230fe8f71a1910ea95a"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>RenderSpriteSystem</b></td></tr>
+<tr class="separator:a5cf0d114180ed230fe8f71a1910ea95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae9a3aabf8daefeab9c17315237cedfc7" name="ae9a3aabf8daefeab9c17315237cedfc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9a3aabf8daefeab9c17315237cedfc7">&#9670;&#160;</a></span>DestroyComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sprite::DestroyComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A virtual destructor function, not defined explicitly as a destructor so we have more control over when a <a class="el" href="classComponent.html">Component</a> (or subclass of it) should be destroyed. </p>
+
+<p>Reimplemented from <a class="el" href="classComponent.html#acce54c4b15a14b6acc49de8309ae87e7">Component</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>gen-files/vendor/Roc_ECS/include/Components/<a class="el" href="Sprite_8h_source.html">Sprite.h</a></li>
+<li>gen-files/vendor/Roc_ECS/include/Components/<b>Sprite.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

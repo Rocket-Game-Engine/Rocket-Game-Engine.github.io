@@ -99,6 +99,7 @@ $(document).ready(function(){initNavTree('classPaddle.html',''); initResizable()
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classPaddle-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Paddle Class Reference</div></div>
 </div><!--header-->
@@ -126,9 +127,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>__set_key_down</b> (P
 <tr class="memitem:a8e3b6404ac5d4337b0d24d5c44b42b82" id="r_a8e3b6404ac5d4337b0d24d5c44b42b82"><td class="memItemLeft" align="right" valign="top"><a id="a8e3b6404ac5d4337b0d24d5c44b42b82" name="a8e3b6404ac5d4337b0d24d5c44b42b82"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>__set_vertical_speed</b> (Property p)</td></tr>
 <tr class="separator:a8e3b6404ac5d4337b0d24d5c44b42b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b6f29c3bfc14e0f454bfa1b7bf228ab" id="r_a7b6f29c3bfc14e0f454bfa1b7bf228ab"><td class="memItemLeft" align="right" valign="top"><a id="a7b6f29c3bfc14e0f454bfa1b7bf228ab" name="a7b6f29c3bfc14e0f454bfa1b7bf228ab"></a>
-BOOST_PP_REM(public:RocketKey key_up=RocketKey::W;) BOOST_PP_REM(public&#160;</td><td class="memItemRight" valign="bottom"><b>BOOST_PP_REM</b> (public:double vertical_speed=1.0;) public</td></tr>
-<tr class="separator:a7b6f29c3bfc14e0f454bfa1b7bf228ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa766bc3fa1f64c891d0f26f02e3af8ae" id="r_aa766bc3fa1f64c891d0f26f02e3af8ae"><td class="memItemLeft" align="right" valign="top"><a id="aa766bc3fa1f64c891d0f26f02e3af8ae" name="aa766bc3fa1f64c891d0f26f02e3af8ae"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Paddle</b> (const <a class="el" href="classPaddle.html">Paddle</a> &amp;cpy)</td></tr>
 <tr class="separator:aa766bc3fa1f64c891d0f26f02e3af8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,14 +134,12 @@ BOOST_PP_REM(public:RocketKey key_up=RocketKey::W;) BOOST_PP_REM(public&#160;</t
 <a class="el" href="classPaddle.html">Paddle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classPaddle.html">Paddle</a> &amp;cpy)</td></tr>
 <tr class="separator:add8b6ae72be25c6d892cc84a21143704"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classComponent"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classComponent')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classComponent.html">Component</a></td></tr>
-<tr class="memitem:aeb52c63523aaa0c423df656b41ae9386 inherit pub_methods_classComponent" id="r_aeb52c63523aaa0c423df656b41ae9386"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>Component</b> (bool null=false)</td></tr>
+<tr class="memitem:aeb52c63523aaa0c423df656b41ae9386 inherit pub_methods_classComponent" id="r_aeb52c63523aaa0c423df656b41ae9386"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#aeb52c63523aaa0c423df656b41ae9386">Component</a> (bool null=false)</td></tr>
 <tr class="separator:aeb52c63523aaa0c423df656b41ae9386 inherit pub_methods_classComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a610d1ac1407436a7fd23c2e89a9bd592 inherit pub_methods_classComponent" id="r_a610d1ac1407436a7fd23c2e89a9bd592"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isNull</b> ()</td></tr>
 <tr class="separator:a610d1ac1407436a7fd23c2e89a9bd592 inherit pub_methods_classComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acce54c4b15a14b6acc49de8309ae87e7 inherit pub_methods_classComponent" id="r_acce54c4b15a14b6acc49de8309ae87e7"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>DestroyComponent</b> ()</td></tr>
+<tr class="memitem:acce54c4b15a14b6acc49de8309ae87e7 inherit pub_methods_classComponent" id="r_acce54c4b15a14b6acc49de8309ae87e7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#acce54c4b15a14b6acc49de8309ae87e7">DestroyComponent</a> ()</td></tr>
 <tr class="separator:acce54c4b15a14b6acc49de8309ae87e7 inherit pub_methods_classComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
@@ -152,11 +148,19 @@ Static Public Member Functions</h2></td></tr>
 static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> ()</td></tr>
 <tr class="separator:a0734c7a00b896ed8b4a965f630a44f60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a58f1a07095918edbb405fc33645d621b" id="r_a58f1a07095918edbb405fc33645d621b"><td class="memItemLeft" align="right" valign="top"><a id="a58f1a07095918edbb405fc33645d621b" name="a58f1a07095918edbb405fc33645d621b"></a>
+RocketKey&#160;</td><td class="memItemRight" valign="bottom"><b>key_up</b> = RocketKey::W</td></tr>
+<tr class="separator:a58f1a07095918edbb405fc33645d621b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26c95924e3747ead0aaf5d9167d52372" id="r_a26c95924e3747ead0aaf5d9167d52372"><td class="memItemLeft" align="right" valign="top"><a id="a26c95924e3747ead0aaf5d9167d52372" name="a26c95924e3747ead0aaf5d9167d52372"></a>
+RocketKey&#160;</td><td class="memItemRight" valign="bottom"><b>key_down</b> = RocketKey::S</td></tr>
+<tr class="separator:a26c95924e3747ead0aaf5d9167d52372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01cf09ea9cafc573e06dbfcacf9a888c" id="r_a01cf09ea9cafc573e06dbfcacf9a888c"><td class="memItemLeft" align="right" valign="top"><a id="a01cf09ea9cafc573e06dbfcacf9a888c" name="a01cf09ea9cafc573e06dbfcacf9a888c"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>vertical_speed</b> = 1.0</td></tr>
+<tr class="separator:a01cf09ea9cafc573e06dbfcacf9a888c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classComponent"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classComponent')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classComponent.html">Component</a></td></tr>
-<tr class="memitem:a20467d04514587ec8aa96a1fae456dd2 inherit pub_attribs_classComponent" id="r_a20467d04514587ec8aa96a1fae456dd2"><td class="memItemLeft" align="right" valign="top">
-std::map&lt; std::string, std::function&lt; void(Property)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_setters</b></td></tr>
+<tr class="memitem:a20467d04514587ec8aa96a1fae456dd2 inherit pub_attribs_classComponent" id="r_a20467d04514587ec8aa96a1fae456dd2"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::function&lt; void(Property)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#a20467d04514587ec8aa96a1fae456dd2">_setters</a></td></tr>
 <tr class="separator:a20467d04514587ec8aa96a1fae456dd2 inherit pub_attribs_classComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>

@@ -102,16 +102,26 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <div class="textblock"><dl class="reflist">
 <dt>Member <a class="el" href="Texture_8cpp.html#a056daee4f01c4b54a3f4e689ab7f4504">ClearTexture</a>  (<a class="el" href="structTextureInfo.html">TextureInfo</a> &amp;info)</dt>
 <dd><a class="anchor" id="_todo000012"></a>why is this redefinition here??  </dd>
+<dt>Member <a class="el" href="classComponent.html#a20467d04514587ec8aa96a1fae456dd2">Component::_setters</a>  </dt>
+<dd><a class="anchor" id="_todo000018"></a>Make this class have a friend function of <a class="el" href="LoadRscene_8cpp.html#a1c5c70438301ce70eb028e5bba115125">LoadScene()</a> and make _setters protected.  </dd>
+<dt>Member <a class="el" href="classComponent.html#aeb52c63523aaa0c423df656b41ae9386">Component::Component</a>  (bool null=false)</dt>
+<dd><a class="anchor" id="_todo000019"></a>Remove all instances of isNull and its properties - they serve no purpose.  </dd>
 <dt>Member <a class="el" href="classComponentArray.html#a45517d620d2385c5f93978e6b2e1a620">ComponentArray&lt; T &gt;::GetData</a>  (Entity entity)</dt>
-<dd><a class="anchor" id="_todo000017"></a>PLEASE FIX THIS, I HATE THIS CODE  </dd>
+<dd><a class="anchor" id="_todo000023"></a>PLEASE FIX THIS, I HATE THIS CODE  </dd>
+<dt>File <a class="el" href="ComponentManager_8h.html">ComponentManager.h</a>  </dt>
+<dd><a class="anchor" id="_todo000020"></a>A LOT of these functions could use a cleanup, especially in the error checking department. </dd>
+<dt>Member <a class="el" href="classComponentManager.html#a552bd65ec990af5437d6f2b8a51df74b">ComponentManager::AddComponentToEntityFromText</a>  (Entity e, const std::string &amp;typeName)</dt>
+<dd><a class="anchor" id="_todo000021"></a>Perhaps add <a class="el" href="LoadRscene_8cpp.html#a1c5c70438301ce70eb028e5bba115125">LoadScene()</a> as a friend function, and make this function private? (Or similar in the <a class="el" href="classCoordinator.html">Coordinator</a>?) </dd>
 <dt>Member <a class="el" href="classComponentManager.html#a5ea1997bd0256e94b604b8ce8cd2a2d3">ComponentManager::GetComponent</a>  (Entity entity)</dt>
-<dd><a class="anchor" id="_todo000016"></a>AGAIN PLEASE FIX, I HATE ASSERTS IN REAL CODE  </dd>
+<dd><a class="anchor" id="_todo000022"></a>AGAIN PLEASE FIX, I HATE ASSERTS IN REAL CODE  </dd>
 <dt>Class <a class="el" href="structCoordinateSystem.html">CoordinateSystem</a>  </dt>
 <dd><a class="anchor" id="_todo000007"></a>Remove this class and its properties, they serve zero function to the overall design of the engine.  </dd>
 <dt>File <a class="el" href="LoadRscene_8hpp.html">LoadRscene.hpp</a>  </dt>
-<dd><a class="anchor" id="_todo000014"></a>Come up with a better name than RScene... Current frontrunners are "Liftoff" and "Arsene" </dd>
+<dd><p class="startdd"><a class="anchor" id="_todo000015"></a>Come up with a better name than RScene... Current frontrunners are "Liftoff" and "Arsene"</p>
+<p class="enddd"><a class="anchor" id="_todo000016"></a>Create a custom doxygen page detailing the Rscene syntax. </p>
+</dd>
 <dt>Member <a class="el" href="LoadRscene_8hpp.html#a1c5c70438301ce70eb028e5bba115125">LoadScene</a>  (const std::string &amp;filepath)</dt>
-<dd><a class="anchor" id="_todo000015"></a>Add more thorough error checking for syntax </dd>
+<dd><a class="anchor" id="_todo000017"></a>Add more thorough error checking for syntax </dd>
 <dt>Member <a class="el" href="classPaddleControls.html#a6c080942803bed34d56833ad18e86087">PaddleControls::Do</a>  (GLFWwindow *win)</dt>
 <dd><p class="startdd"><a class="anchor" id="_todo000005"></a>Add deltatime to this function, it really should be tied to the framerate.</p>
 <p class="enddd"><a class="anchor" id="_todo000006"></a>Remove GLFWwindow* from arguments list, now that the keyboard works correctly, we don't need it. </p>

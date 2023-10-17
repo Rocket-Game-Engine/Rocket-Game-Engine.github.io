@@ -122,25 +122,104 @@ Inheritance diagram for Component:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aeb52c63523aaa0c423df656b41ae9386" id="r_aeb52c63523aaa0c423df656b41ae9386"><td class="memItemLeft" align="right" valign="top"><a id="aeb52c63523aaa0c423df656b41ae9386" name="aeb52c63523aaa0c423df656b41ae9386"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Component</b> (bool null=false)</td></tr>
+<tr class="memitem:aeb52c63523aaa0c423df656b41ae9386" id="r_aeb52c63523aaa0c423df656b41ae9386"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#aeb52c63523aaa0c423df656b41ae9386">Component</a> (bool null=false)</td></tr>
 <tr class="separator:aeb52c63523aaa0c423df656b41ae9386"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a610d1ac1407436a7fd23c2e89a9bd592" id="r_a610d1ac1407436a7fd23c2e89a9bd592"><td class="memItemLeft" align="right" valign="top"><a id="a610d1ac1407436a7fd23c2e89a9bd592" name="a610d1ac1407436a7fd23c2e89a9bd592"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isNull</b> ()</td></tr>
 <tr class="separator:a610d1ac1407436a7fd23c2e89a9bd592"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acce54c4b15a14b6acc49de8309ae87e7" id="r_acce54c4b15a14b6acc49de8309ae87e7"><td class="memItemLeft" align="right" valign="top"><a id="acce54c4b15a14b6acc49de8309ae87e7" name="acce54c4b15a14b6acc49de8309ae87e7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>DestroyComponent</b> ()</td></tr>
+<tr class="memitem:acce54c4b15a14b6acc49de8309ae87e7" id="r_acce54c4b15a14b6acc49de8309ae87e7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#acce54c4b15a14b6acc49de8309ae87e7">DestroyComponent</a> ()</td></tr>
 <tr class="separator:acce54c4b15a14b6acc49de8309ae87e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a20467d04514587ec8aa96a1fae456dd2" id="r_a20467d04514587ec8aa96a1fae456dd2"><td class="memItemLeft" align="right" valign="top"><a id="a20467d04514587ec8aa96a1fae456dd2" name="a20467d04514587ec8aa96a1fae456dd2"></a>
-std::map&lt; std::string, std::function&lt; void(Property)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_setters</b></td></tr>
+<tr class="memitem:a20467d04514587ec8aa96a1fae456dd2" id="r_a20467d04514587ec8aa96a1fae456dd2"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::function&lt; void(Property)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComponent.html#a20467d04514587ec8aa96a1fae456dd2">_setters</a></td></tr>
 <tr class="separator:a20467d04514587ec8aa96a1fae456dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A quick base class, just so that any components created all implement certain Constructors and have a public "isNull" boolean. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aeb52c63523aaa0c423df656b41ae9386" name="aeb52c63523aaa0c423df656b41ae9386"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb52c63523aaa0c423df656b41ae9386">&#9670;&#160;</a></span>Component()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Component::Component </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>null</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Default constructor</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">null</td><td>Is the created component null?</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000019">Todo:</a></b></dt><dd>Remove all instances of isNull and its properties - they serve no purpose. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="acce54c4b15a14b6acc49de8309ae87e7" name="acce54c4b15a14b6acc49de8309ae87e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acce54c4b15a14b6acc49de8309ae87e7">&#9670;&#160;</a></span>DestroyComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Component::DestroyComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A virtual destructor function, not defined explicitly as a destructor so we have more control over when a <a class="el" href="classComponent.html">Component</a> (or subclass of it) should be destroyed. </p>
+
+<p>Reimplemented in <a class="el" href="classSprite.html#ae9a3aabf8daefeab9c17315237cedfc7">Sprite</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a20467d04514587ec8aa96a1fae456dd2" name="a20467d04514587ec8aa96a1fae456dd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20467d04514587ec8aa96a1fae456dd2">&#9670;&#160;</a></span>_setters</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, std::function&lt;void(Property)&gt; &gt; Component::_setters</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A map of setter functions for any RocketProperties inside a subclass.</p>
+<dl class="section note"><dt>Note</dt><dd>This map is only public to work with <a class="el" href="LoadRscene_8cpp.html#a1c5c70438301ce70eb028e5bba115125">LoadScene()</a>.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000018">Todo:</a></b></dt><dd>Make this class have a friend function of <a class="el" href="LoadRscene_8cpp.html#a1c5c70438301ce70eb028e5bba115125">LoadScene()</a> and make _setters protected. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>gen-files/vendor/Roc_ECS/include/<a class="el" href="Component_8h_source.html">Component.h</a></li>
 </ul>
 </div><!-- contents -->
