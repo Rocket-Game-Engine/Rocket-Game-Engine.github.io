@@ -5,10 +5,10 @@ var dir_a0e3b412bf035b5c1db2a0288aee3f8a =
     [ "Component.h", "Component_8h.html", "Component_8h" ],
     [ "ComponentManager.h", "ComponentManager_8h.html", "ComponentManager_8h" ],
     [ "Coordinator.h", "Coordinator_8h_source.html", null ],
-    [ "Entity.h", "Entity_8h_source.html", null ],
+    [ "Entity.h", "Entity_8h.html", "Entity_8h" ],
     [ "EntityManager.h", "EntityManager_8h_source.html", null ],
     [ "IComponentArray.h", "IComponentArray_8h_source.html", null ],
-    [ "Roc_ECS.h", "Roc__ECS_8h_source.html", null ],
-    [ "System.h", "System_8h_source.html", null ],
+    [ "Roc_ECS.h", "Roc__ECS_8h.html", null ],
+    [ "System.h", "System_8h.html", "System_8h" ],
     [ "SystemManager.h", "SystemManager_8h_source.html", null ]
 ];

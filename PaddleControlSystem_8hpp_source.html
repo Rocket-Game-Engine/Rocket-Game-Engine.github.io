@@ -112,7 +112,7 @@ $(document).ready(function(){initNavTree('PaddleControlSystem_8hpp_source.html',
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classPaddleControls.html#a6c080942803bed34d56833ad18e86087">   41</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPaddleControls.html#a6c080942803bed34d56833ad18e86087">Do</a>(GLFWwindow* win)</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    {</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_class" href="classCoordinator.html">Coordinator</a>* cd = Coordinator::Get();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">for</span> (Entity e : mEntities)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">for</span> (Entity e : <a class="code hl_variable" href="classSystem.html#ae916183b95be1ef86df80054320f9855">mEntities</a>)</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        {</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <a class="code hl_class" href="classTransform.html">Transform</a>&amp; t = cd-&gt;GetComponent&lt;<a class="code hl_class" href="classTransform.html">Transform</a>&gt;(e);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <a class="code hl_class" href="classPaddle.html">Paddle</a>&amp; p = cd-&gt;GetComponent&lt;<a class="code hl_class" href="classPaddle.html">Paddle</a>&gt;(e);</div>
@@ -128,7 +128,8 @@ $(document).ready(function(){initNavTree('PaddleControlSystem_8hpp_source.html',
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
 </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    Signature GetSignature()<span class="keyword"> override</span></div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classPaddleControls.html#ae4d3107327441d8a4a4f280a7b4da732">   59</a></span>    Signature <a class="code hl_function" href="classPaddleControls.html#ae4d3107327441d8a4a4f280a7b4da732">GetSignature</a>()<span class="keyword"> override</span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">    </span>{</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        Signature sig;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_class" href="classCoordinator.html">Coordinator</a>* cd = Coordinator::Get();</div>
@@ -136,13 +137,16 @@ $(document).ready(function(){initNavTree('PaddleControlSystem_8hpp_source.html',
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        sig[cd-&gt;GetComponentType&lt;<a class="code hl_class" href="classPaddle.html">Paddle</a>&gt;()].flip();</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">return</span> sig;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
+</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>};</div>
 </div>
 <div class="ttc" id="aclassCoordinator_html"><div class="ttname"><a href="classCoordinator.html">Coordinator</a></div><div class="ttdef"><b>Definition</b> Coordinator.h:9</div></div>
 <div class="ttc" id="aclassPaddleControls_html"><div class="ttname"><a href="classPaddleControls.html">PaddleControls</a></div><div class="ttdef"><b>Definition</b> PaddleControlSystem.hpp:24</div></div>
 <div class="ttc" id="aclassPaddleControls_html_a6c080942803bed34d56833ad18e86087"><div class="ttname"><a href="classPaddleControls.html#a6c080942803bed34d56833ad18e86087">PaddleControls::Do</a></div><div class="ttdeci">void Do(GLFWwindow *win)</div><div class="ttdef"><b>Definition</b> PaddleControlSystem.hpp:41</div></div>
+<div class="ttc" id="aclassPaddleControls_html_ae4d3107327441d8a4a4f280a7b4da732"><div class="ttname"><a href="classPaddleControls.html#ae4d3107327441d8a4a4f280a7b4da732">PaddleControls::GetSignature</a></div><div class="ttdeci">Signature GetSignature() override</div><div class="ttdef"><b>Definition</b> PaddleControlSystem.hpp:59</div></div>
 <div class="ttc" id="aclassPaddle_html"><div class="ttname"><a href="classPaddle.html">Paddle</a></div><div class="ttdef"><b>Definition</b> Paddle.hpp:12</div></div>
-<div class="ttc" id="aclassSystem_html"><div class="ttname"><a href="classSystem.html">System</a></div><div class="ttdef"><b>Definition</b> System.h:9</div></div>
+<div class="ttc" id="aclassSystem_html"><div class="ttname"><a href="classSystem.html">System</a></div><div class="ttdef"><b>Definition</b> System.h:31</div></div>
+<div class="ttc" id="aclassSystem_html_ae916183b95be1ef86df80054320f9855"><div class="ttname"><a href="classSystem.html#ae916183b95be1ef86df80054320f9855">System::mEntities</a></div><div class="ttdeci">std::set&lt; Entity &gt; mEntities</div><div class="ttdef"><b>Definition</b> System.h:34</div></div>
 <div class="ttc" id="aclassTransform_html"><div class="ttname"><a href="classTransform.html">Transform</a></div><div class="ttdef"><b>Definition</b> Transform.h:6</div></div>
 <div class="ttc" id="astructRocketKeyboard_html_a5c5607681b1ecaf97e72e4bef4904072"><div class="ttname"><a href="structRocketKeyboard.html#a5c5607681b1ecaf97e72e4bef4904072">RocketKeyboard::IsKeyPressed</a></div><div class="ttdeci">static bool IsKeyPressed(RocketKey key)</div><div class="ttdef"><b>Definition</b> Keyboard.cpp:128</div></div>
 </div><!-- fragment --></div><!-- contents -->

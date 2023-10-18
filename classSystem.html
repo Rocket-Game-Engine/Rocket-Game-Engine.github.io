@@ -103,6 +103,8 @@ $(document).ready(function(){initNavTree('classSystem.html',''); initResizable()
   <div class="headertitle"><div class="title">System Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="System_8h_source.html">System.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for System:</div>
 <div class="dyncontent">
@@ -119,16 +121,62 @@ Inheritance diagram for System:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa157ca993f8a79f21e0fbb0cc299c114" id="r_aa157ca993f8a79f21e0fbb0cc299c114"><td class="memItemLeft" align="right" valign="top"><a id="aa157ca993f8a79f21e0fbb0cc299c114" name="aa157ca993f8a79f21e0fbb0cc299c114"></a>
-virtual Signature&#160;</td><td class="memItemRight" valign="bottom"><b>GetSignature</b> ()=0</td></tr>
+<tr class="memitem:aa157ca993f8a79f21e0fbb0cc299c114" id="r_aa157ca993f8a79f21e0fbb0cc299c114"><td class="memItemLeft" align="right" valign="top">virtual Signature&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSystem.html#aa157ca993f8a79f21e0fbb0cc299c114">GetSignature</a> ()=0</td></tr>
 <tr class="separator:aa157ca993f8a79f21e0fbb0cc299c114"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ae916183b95be1ef86df80054320f9855" id="r_ae916183b95be1ef86df80054320f9855"><td class="memItemLeft" align="right" valign="top"><a id="ae916183b95be1ef86df80054320f9855" name="ae916183b95be1ef86df80054320f9855"></a>
-std::set&lt; Entity &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mEntities</b></td></tr>
+<tr class="memitem:ae916183b95be1ef86df80054320f9855" id="r_ae916183b95be1ef86df80054320f9855"><td class="memItemLeft" align="right" valign="top">std::set&lt; Entity &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSystem.html#ae916183b95be1ef86df80054320f9855">mEntities</a></td></tr>
 <tr class="separator:ae916183b95be1ef86df80054320f9855"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The small but mighty <a class="el" href="classSystem.html">System</a> base class. Any systems the user would want should be subclassed from this class. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa157ca993f8a79f21e0fbb0cc299c114" name="aa157ca993f8a79f21e0fbb0cc299c114"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa157ca993f8a79f21e0fbb0cc299c114">&#9670;&#160;</a></span>GetSignature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Signature System::GetSignature </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A virtual function returning the signature of the <a class="el" href="classSystem.html">System</a>. This will affect which Entities are able to be affected by the <a class="el" href="classSystem.html">System</a>, as well as ensuring specific Components being on each Entity.</p>
+<dl class="section return"><dt>Returns</dt><dd>The Signature bitset of the <a class="el" href="classSystem.html">System</a>. </dd></dl>
+
+<p>Implemented in <a class="el" href="classBallSystem.html#ac5d0373e4596e2024460b95df75b7bd1">BallSystem</a>, <a class="el" href="classLogTransform.html#ab1a6e63f138ce16c656a997bd8e7415d">LogTransform</a>, <a class="el" href="classPaddleControls.html#ae4d3107327441d8a4a4f280a7b4da732">PaddleControls</a>, <a class="el" href="classCollisionSystem.html#acb46ace45cf8103fd8e891cd3be0d05b">CollisionSystem</a>, and <a class="el" href="classRenderSpriteSystem.html#a8bd9134b43cadf4554867f9b96a784b0">RenderSpriteSystem</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae916183b95be1ef86df80054320f9855" name="ae916183b95be1ef86df80054320f9855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae916183b95be1ef86df80054320f9855">&#9670;&#160;</a></span>mEntities</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;Entity&gt; System::mEntities</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A set of Entities that are affected by the <a class="el" href="classSystem.html">System</a> </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>gen-files/vendor/Roc_ECS/include/<a class="el" href="System_8h_source.html">System.h</a></li>
 </ul>

@@ -8,5 +8,7 @@ var searchData=
   ['m_5fwinwidth_5',['m_winWidth',['../classApplication.html#a772236069e04a7c1f130a6d140d67927',1,'Application']]],
   ['main_6',['main',['../classApplication.html#ab404e626ddbbd2a59c94d58258f6f162',1,'Application::Main()'],['../classRocApplication.html#acaffccaebd745efbcac9353ad9cfa800',1,'RocApplication::Main()'],['../classRocTests.html#a75a0faceac53fdd1088ff5b495312232',1,'RocTests::Main()']]],
   ['main_20function_7',['main function',['../application_layout.html#main_function',1,'The Main Function'],['../todo.html#_todo000003',1,'The Main Function'],['../application_layout.html#the_other_main',1,'The... other main function'],['../todo.html#_todo000004',1,'The... other main function']]],
-  ['max_5fcomponents_8',['MAX_COMPONENTS',['../Component_8h.html#aaada9ea12b74f92a9c7cc564321e7e5e',1,'Component.h']]]
+  ['max_5fcomponents_8',['MAX_COMPONENTS',['../Component_8h.html#aaada9ea12b74f92a9c7cc564321e7e5e',1,'Component.h']]],
+  ['max_5fentities_9',['MAX_ENTITIES',['../Entity_8h.html#a4851adb72a1790d96048936c4e845d7a',1,'Entity.h']]],
+  ['mentities_10',['mEntities',['../classSystem.html#ae916183b95be1ef86df80054320f9855',1,'System']]]
 ];

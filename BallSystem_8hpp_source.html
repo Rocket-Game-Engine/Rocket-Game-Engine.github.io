@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('BallSystem_8hpp_source.html',''); init
 <a href="BallSystem_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>       </div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;Roc_ECS.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="Roc__ECS_8h.html">Roc_ECS.h</a>&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;ECS/Components/Ball.hpp&quot;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="Keyboard_8hpp.html">Base/Keyboard.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
@@ -123,7 +123,7 @@ $(document).ready(function(){initNavTree('BallSystem_8hpp_source.html',''); init
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classBallSystem.html#af1c2cd48f1097c8a7500a4d7175b60e5">   70</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classBallSystem.html#af1c2cd48f1097c8a7500a4d7175b60e5">Do</a>(<span class="keywordtype">double</span> deltatime)</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_class" href="classCoordinator.html">Coordinator</a>* cd = Coordinator::Get();</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">for</span> (Entity e : mEntities)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">for</span> (Entity e : <a class="code hl_variable" href="classSystem.html#ae916183b95be1ef86df80054320f9855">mEntities</a>)</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        {</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <a class="code hl_class" href="classTransform.html">Transform</a>&amp; t = cd-&gt;GetComponent&lt;<a class="code hl_class" href="classTransform.html">Transform</a>&gt;(e);</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <a class="code hl_class" href="classBallComponent.html">BallComponent</a>&amp; b = cd-&gt;GetComponent&lt;<a class="code hl_class" href="classBallComponent.html">BallComponent</a>&gt;(e);</div>
@@ -188,7 +188,8 @@ $(document).ready(function(){initNavTree('BallSystem_8hpp_source.html',''); init
 </div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    Signature GetSignature()<span class="keyword"> override</span></div>
+<div class="foldopen" id="foldopen00137" data-start="{" data-end="}">
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="classBallSystem.html#ac5d0373e4596e2024460b95df75b7bd1">  137</a></span>    Signature <a class="code hl_function" href="classBallSystem.html#ac5d0373e4596e2024460b95df75b7bd1">GetSignature</a>()<span class="keyword"> override</span></div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="keyword">    </span>{</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        Signature sig;</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <a class="code hl_class" href="classCoordinator.html">Coordinator</a>* cd = Coordinator::Get();</div>
@@ -197,15 +198,19 @@ $(document).ready(function(){initNavTree('BallSystem_8hpp_source.html',''); init
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        sig[cd-&gt;GetComponentType&lt;<a class="code hl_class" href="classRectangleCollider.html">RectangleCollider</a>&gt;()].flip();</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordflow">return</span> sig;</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    }</div>
+</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>};</div>
 </div>
 <div class="ttc" id="aKeyboard_8hpp_html"><div class="ttname"><a href="Keyboard_8hpp.html">Keyboard.hpp</a></div></div>
+<div class="ttc" id="aRoc__ECS_8h_html"><div class="ttname"><a href="Roc__ECS_8h.html">Roc_ECS.h</a></div><div class="ttdoc">Overall include for the Entity-Component System.</div></div>
 <div class="ttc" id="aclassBallComponent_html"><div class="ttname"><a href="classBallComponent.html">BallComponent</a></div><div class="ttdef"><b>Definition</b> Ball.hpp:14</div></div>
 <div class="ttc" id="aclassBallSystem_html"><div class="ttname"><a href="classBallSystem.html">BallSystem</a></div><div class="ttdef"><b>Definition</b> BallSystem.hpp:28</div></div>
+<div class="ttc" id="aclassBallSystem_html_ac5d0373e4596e2024460b95df75b7bd1"><div class="ttname"><a href="classBallSystem.html#ac5d0373e4596e2024460b95df75b7bd1">BallSystem::GetSignature</a></div><div class="ttdeci">Signature GetSignature() override</div><div class="ttdef"><b>Definition</b> BallSystem.hpp:137</div></div>
 <div class="ttc" id="aclassBallSystem_html_af1c2cd48f1097c8a7500a4d7175b60e5"><div class="ttname"><a href="classBallSystem.html#af1c2cd48f1097c8a7500a4d7175b60e5">BallSystem::Do</a></div><div class="ttdeci">void Do(double deltatime)</div><div class="ttdoc">Updates the ball's position and velocity based on collisions.</div><div class="ttdef"><b>Definition</b> BallSystem.hpp:70</div></div>
 <div class="ttc" id="aclassCoordinator_html"><div class="ttname"><a href="classCoordinator.html">Coordinator</a></div><div class="ttdef"><b>Definition</b> Coordinator.h:9</div></div>
 <div class="ttc" id="aclassRectangleCollider_html"><div class="ttname"><a href="classRectangleCollider.html">RectangleCollider</a></div><div class="ttdef"><b>Definition</b> RectangleCollider.hpp:22</div></div>
-<div class="ttc" id="aclassSystem_html"><div class="ttname"><a href="classSystem.html">System</a></div><div class="ttdef"><b>Definition</b> System.h:9</div></div>
+<div class="ttc" id="aclassSystem_html"><div class="ttname"><a href="classSystem.html">System</a></div><div class="ttdef"><b>Definition</b> System.h:31</div></div>
+<div class="ttc" id="aclassSystem_html_ae916183b95be1ef86df80054320f9855"><div class="ttname"><a href="classSystem.html#ae916183b95be1ef86df80054320f9855">System::mEntities</a></div><div class="ttdeci">std::set&lt; Entity &gt; mEntities</div><div class="ttdef"><b>Definition</b> System.h:34</div></div>
 <div class="ttc" id="aclassTransform_html"><div class="ttname"><a href="classTransform.html">Transform</a></div><div class="ttdef"><b>Definition</b> Transform.h:6</div></div>
 <div class="ttc" id="astructCollision_html"><div class="ttname"><a href="structCollision.html">Collision</a></div><div class="ttdef"><b>Definition</b> RectangleCollider.hpp:13</div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -130,14 +130,14 @@ $(document).ready(function(){initNavTree('CollisionSystem_8hpp_source.html','');
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_class" href="classCoordinator.html">Coordinator</a>* cd = Coordinator::Get();</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        std::set&lt;Entity&gt;::iterator first;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        std::set&lt;Entity&gt;::iterator second;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">for</span> (first = mEntities.begin(); first != mEntities.end(); first++)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">for</span> (first = <a class="code hl_variable" href="classSystem.html#ae916183b95be1ef86df80054320f9855">mEntities</a>.begin(); first != <a class="code hl_variable" href="classSystem.html#ae916183b95be1ef86df80054320f9855">mEntities</a>.end(); first++)</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <a class="code hl_class" href="classTransform.html">Transform</a>&amp; first_transform = cd-&gt;GetComponent&lt;<a class="code hl_class" href="classTransform.html">Transform</a>&gt;(*first);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <a class="code hl_class" href="classRectangleCollider.html">RectangleCollider</a>&amp; first_collider = cd-&gt;GetComponent&lt;<a class="code hl_class" href="classRectangleCollider.html">RectangleCollider</a>&gt;(*first);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            second = first;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            second++;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">for</span> (; second != mEntities.end(); second++)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">for</span> (; second != <a class="code hl_variable" href="classSystem.html#ae916183b95be1ef86df80054320f9855">mEntities</a>.end(); second++)</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            {</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                <a class="code hl_class" href="classTransform.html">Transform</a>&amp; second_transform = cd-&gt;GetComponent&lt;<a class="code hl_class" href="classTransform.html">Transform</a>&gt;(*second);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                <a class="code hl_class" href="classRectangleCollider.html">RectangleCollider</a>&amp; second_collider = cd-&gt;GetComponent&lt;<a class="code hl_class" href="classRectangleCollider.html">RectangleCollider</a>&gt;(*second);</div>
@@ -161,14 +161,15 @@ $(document).ready(function(){initNavTree('CollisionSystem_8hpp_source.html','');
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> Clear()</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    {</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <a class="code hl_class" href="classCoordinator.html">Coordinator</a>* cd = Coordinator::Get();</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">for</span> (Entity e : mEntities)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">for</span> (Entity e : <a class="code hl_variable" href="classSystem.html#ae916183b95be1ef86df80054320f9855">mEntities</a>)</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        {</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <a class="code hl_class" href="classRectangleCollider.html">RectangleCollider</a>&amp; c = cd-&gt;GetComponent&lt;<a class="code hl_class" href="classRectangleCollider.html">RectangleCollider</a>&gt;(e);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            c.collisions.clear();</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    Signature GetSignature()<span class="keyword"> override</span></div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classCollisionSystem.html#acb46ace45cf8103fd8e891cd3be0d05b">   69</a></span>    Signature <a class="code hl_function" href="classCollisionSystem.html#acb46ace45cf8103fd8e891cd3be0d05b">GetSignature</a>()<span class="keyword"> override</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">    </span>{</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        Signature sig;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_class" href="classCoordinator.html">Coordinator</a>* cd = Coordinator::Get();</div>
@@ -176,12 +177,15 @@ $(document).ready(function(){initNavTree('CollisionSystem_8hpp_source.html','');
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        sig[cd-&gt;GetComponentType&lt;<a class="code hl_class" href="classRectangleCollider.html">RectangleCollider</a>&gt;()].flip();</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">return</span> sig;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
+</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>};</div>
 </div>
 <div class="ttc" id="aclassCollisionSystem_html"><div class="ttname"><a href="classCollisionSystem.html">CollisionSystem</a></div><div class="ttdef"><b>Definition</b> CollisionSystem.hpp:8</div></div>
+<div class="ttc" id="aclassCollisionSystem_html_acb46ace45cf8103fd8e891cd3be0d05b"><div class="ttname"><a href="classCollisionSystem.html#acb46ace45cf8103fd8e891cd3be0d05b">CollisionSystem::GetSignature</a></div><div class="ttdeci">Signature GetSignature() override</div><div class="ttdef"><b>Definition</b> CollisionSystem.hpp:69</div></div>
 <div class="ttc" id="aclassCoordinator_html"><div class="ttname"><a href="classCoordinator.html">Coordinator</a></div><div class="ttdef"><b>Definition</b> Coordinator.h:9</div></div>
 <div class="ttc" id="aclassRectangleCollider_html"><div class="ttname"><a href="classRectangleCollider.html">RectangleCollider</a></div><div class="ttdef"><b>Definition</b> RectangleCollider.hpp:22</div></div>
-<div class="ttc" id="aclassSystem_html"><div class="ttname"><a href="classSystem.html">System</a></div><div class="ttdef"><b>Definition</b> System.h:9</div></div>
+<div class="ttc" id="aclassSystem_html"><div class="ttname"><a href="classSystem.html">System</a></div><div class="ttdef"><b>Definition</b> System.h:31</div></div>
+<div class="ttc" id="aclassSystem_html_ae916183b95be1ef86df80054320f9855"><div class="ttname"><a href="classSystem.html#ae916183b95be1ef86df80054320f9855">System::mEntities</a></div><div class="ttdeci">std::set&lt; Entity &gt; mEntities</div><div class="ttdef"><b>Definition</b> System.h:34</div></div>
 <div class="ttc" id="aclassTransform_html"><div class="ttname"><a href="classTransform.html">Transform</a></div><div class="ttdef"><b>Definition</b> Transform.h:6</div></div>
 <div class="ttc" id="astructCollision_html"><div class="ttname"><a href="structCollision.html">Collision</a></div><div class="ttdef"><b>Definition</b> RectangleCollider.hpp:13</div></div>
 </div><!-- fragment --></div><!-- contents -->

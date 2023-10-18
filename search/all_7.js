@@ -8,6 +8,6 @@ var searchData=
   ['getkeyfromstringrep_5',['GetKeyFromStringRep',['../structRocketKeyboard.html#a994e950a2f8a1f59b5987b05c125ed8b',1,'RocketKeyboard']]],
   ['getnextid_6',['GetNextID',['../LoadRscene_8cpp.html#ac191f322eb2f231537c3ad0835f98642',1,'LoadRscene.cpp']]],
   ['getnextstring_7',['GetNextString',['../LoadRscene_8cpp.html#a3a0e935d53bcbcb5a717d673e37bd9b9',1,'LoadRscene.cpp']]],
-  ['getsignature_8',['GetSignature',['../classEntityManager.html#a1efb5b7374faa8fb18b67a3a53f5ac7e',1,'EntityManager']]],
+  ['getsignature_8',['getsignature',['../classLogTransform.html#ab1a6e63f138ce16c656a997bd8e7415d',1,'LogTransform::GetSignature()'],['../classPaddleControls.html#ae4d3107327441d8a4a4f280a7b4da732',1,'PaddleControls::GetSignature()'],['../classEntityManager.html#a1efb5b7374faa8fb18b67a3a53f5ac7e',1,'EntityManager::GetSignature()'],['../classSystem.html#aa157ca993f8a79f21e0fbb0cc299c114',1,'System::GetSignature()'],['../classCollisionSystem.html#acb46ace45cf8103fd8e891cd3be0d05b',1,'CollisionSystem::GetSignature()'],['../classRenderSpriteSystem.html#a8bd9134b43cadf4554867f9b96a784b0',1,'RenderSpriteSystem::GetSignature()'],['../classBallSystem.html#ac5d0373e4596e2024460b95df75b7bd1',1,'BallSystem::GetSignature()']]],
   ['gravity_9',['Gravity',['../classGravity.html',1,'']]]
 ];
