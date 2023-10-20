@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rocket Game Engine: gen-files/vendor/Roc_ECS/include/Entity.h File Reference</title>
+<title>Rocket Game Engine: gen-files/vendor/Roc_ECS/include/Coordinator.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript">var page_layout=1;</script>
 <script type="text/javascript" src="jquery.js"></script>
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('Entity_8h.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('Coordinator_8h.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -97,54 +97,32 @@ $(document).ready(function(){initNavTree('Entity_8h.html',''); initResizable(); 
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#var-members">Variables</a>  </div>
-  <div class="headertitle"><div class="title">Entity.h File Reference</div></div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a>  </div>
+  <div class="headertitle"><div class="title">Coordinator.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+<div class="textblock"><code>#include &quot;EntityManager.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="ComponentManager_8h_source.html">ComponentManager.h</a>&quot;</code><br />
+<code>#include &quot;SystemManager.h&quot;</code><br />
 </div>
-<p><a href="Entity_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="Coordinator_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a9a522438c9f5d73ebe6349edc3313d5e" id="r_a9a522438c9f5d73ebe6349edc3313d5e"><td class="memItemLeft" align="right" valign="top"><a id="a9a522438c9f5d73ebe6349edc3313d5e" name="a9a522438c9f5d73ebe6349edc3313d5e"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Entity</b> = std::uint32_t</td></tr>
-<tr class="separator:a9a522438c9f5d73ebe6349edc3313d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a4851adb72a1790d96048936c4e845d7a" id="r_a4851adb72a1790d96048936c4e845d7a"><td class="memItemLeft" align="right" valign="top">const Entity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Entity_8h.html#a4851adb72a1790d96048936c4e845d7a">MAX_ENTITIES</a> = 5000</td></tr>
-<tr class="separator:a4851adb72a1790d96048936c4e845d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinator.html">Coordinator</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A simple set of definitions corresponding to the Entity.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000025">Todo:</a></b></dt><dd>Take out <a class="el" href="classTransform.html">Transform</a> and implement a simple Entity class? It would be weird if we do that.</dd></dl>
+<div class="textblock"><p>This file contains the definition and (most of) the implementation of the engine's <a class="el" href="classCoordinator.html">Coordinator</a> class.</p>
 <dl class="section note"><dt>Note</dt><dd>This, and most base ECS classes, were adapted from <a href="https://austinmorlan.com/posts/entity_component_system/">Austin Morlan's amazing ECS writeup here.</a></dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Tim Bishop </dd></dl>
-</div><h2 class="groupheader">Variable Documentation</h2>
-<a id="a4851adb72a1790d96048936c4e845d7a" name="a4851adb72a1790d96048936c4e845d7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4851adb72a1790d96048936c4e845d7a">&#9670;&#160;</a></span>MAX_ENTITIES</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const Entity MAX_ENTITIES = 5000</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The maximum number of entities allowed in the scene. </p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_2b5be651b6c0a66b392f466b8aa97e51.html">gen-files</a></li><li class="navelem"><a class="el" href="dir_2658788ef9bf36c228b8d2d85d0122c5.html">vendor</a></li><li class="navelem"><a class="el" href="dir_72cebb3e19d52c70b7a2b5c9d4b5fdfb.html">Roc_ECS</a></li><li class="navelem"><a class="el" href="dir_a0e3b412bf035b5c1db2a0288aee3f8a.html">include</a></li><li class="navelem"><a class="el" href="Entity_8h.html">Entity.h</a></li>
+    <li class="navelem"><a class="el" href="dir_2b5be651b6c0a66b392f466b8aa97e51.html">gen-files</a></li><li class="navelem"><a class="el" href="dir_2658788ef9bf36c228b8d2d85d0122c5.html">vendor</a></li><li class="navelem"><a class="el" href="dir_72cebb3e19d52c70b7a2b5c9d4b5fdfb.html">Roc_ECS</a></li><li class="navelem"><a class="el" href="dir_a0e3b412bf035b5c1db2a0288aee3f8a.html">include</a></li><li class="navelem"><a class="el" href="Coordinator_8h.html">Coordinator.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

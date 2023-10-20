@@ -9,7 +9,7 @@ var annotated_dup =
     [ "ComponentArray", "classComponentArray.html", "classComponentArray" ],
     [ "ComponentManager", "classComponentManager.html", "classComponentManager" ],
     [ "CoordinateSystem", "structCoordinateSystem.html", null ],
-    [ "Coordinator", "classCoordinator.html", null ],
+    [ "Coordinator", "classCoordinator.html", "classCoordinator" ],
     [ "EntityManager", "classEntityManager.html", "classEntityManager" ],
     [ "Gravity", "classGravity.html", null ],
     [ "IComponentArray", "classIComponentArray.html", null ],

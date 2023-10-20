@@ -21,7 +21,8 @@ var searchData=
   ['coordinatesystem_2ehpp_18',['CoordinateSystem.hpp',['../CoordinateSystem_8hpp.html',1,'']]],
   ['coordinator_19',['Coordinator',['../classCoordinator.html',1,'']]],
   ['coordinator_2ecpp_20',['Coordinator.cpp',['../Coordinator_8cpp.html',1,'']]],
-  ['createapplication_21',['CreateApplication',['../classApplication.html#a20e7b40d2983b148ac53c84707379905',1,'Application']]],
-  ['createentity_22',['CreateEntity',['../classEntityManager.html#a13887174c0310bf74746c84c79e6de64',1,'EntityManager']]],
-  ['currentapplication_23',['CurrentApplication',['../classApplication.html#a5a115c15d650030948774b616f8dc85a',1,'Application']]]
+  ['coordinator_2eh_21',['Coordinator.h',['../Coordinator_8h.html',1,'']]],
+  ['createapplication_22',['CreateApplication',['../classApplication.html#a20e7b40d2983b148ac53c84707379905',1,'Application']]],
+  ['createentity_23',['createentity',['../classCoordinator.html#a341a083495aa95cd311c7c0b0dc191a6',1,'Coordinator::CreateEntity()'],['../classEntityManager.html#a13887174c0310bf74746c84c79e6de64',1,'EntityManager::CreateEntity()']]],
+  ['currentapplication_24',['CurrentApplication',['../classApplication.html#a5a115c15d650030948774b616f8dc85a',1,'Application']]]
 ];

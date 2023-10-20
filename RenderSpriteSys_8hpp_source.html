@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('RenderSpriteSys_8hpp_source.html','');
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;glad/gl.h&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;Coordinator.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="Coordinator_8h.html">Coordinator.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Components/Transform.h&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;Components/Sprite.h&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
@@ -114,11 +114,11 @@ $(document).ready(function(){initNavTree('RenderSpriteSys_8hpp_source.html','');
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">void</span> Do()</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_class" href="classCoordinator.html">Coordinator</a>* cd = Coordinator::Get();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_class" href="classCoordinator.html">Coordinator</a>* cd = <a class="code hl_function" href="classCoordinator.html#a43efa5eb7f1a1e40d2874d48901438b3">Coordinator::Get</a>();</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordflow">for</span> (Entity e : <a class="code hl_variable" href="classSystem.html#ae916183b95be1ef86df80054320f9855">mEntities</a>)</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <a class="code hl_class" href="classSprite.html">Sprite</a>&amp; s = cd-&gt;GetComponent&lt;<a class="code hl_class" href="classSprite.html">Sprite</a>&gt;(e);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <a class="code hl_class" href="classTransform.html">Transform</a>&amp; t = cd-&gt;GetComponent&lt;<a class="code hl_class" href="classTransform.html">Transform</a>&gt;(e);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <a class="code hl_class" href="classSprite.html">Sprite</a>&amp; s = cd-&gt;<a class="code hl_function" href="classCoordinator.html#ab3f4c856782a98c96a4cda3b94d517fc">GetComponent</a>&lt;<a class="code hl_class" href="classSprite.html">Sprite</a>&gt;(e);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <a class="code hl_class" href="classTransform.html">Transform</a>&amp; t = cd-&gt;<a class="code hl_function" href="classCoordinator.html#ab3f4c856782a98c96a4cda3b94d517fc">GetComponent</a>&lt;<a class="code hl_class" href="classTransform.html">Transform</a>&gt;(e);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <a class="code hl_struct" href="structTextureInfo.html">TextureInfo</a> info = <a class="code hl_variable" href="classTextures.html#a13347110843a524109b6838736a01ef2">Textures::TextureMap</a>.<a class="code hl_function" href="classTextureHashMap.html#a75bcb42e61fd93bdfc02d79305f443c9">at</a>(s.texture_key);</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <a class="code hl_class" href="classShader.html">Shader</a> shader = <a class="code hl_variable" href="classShaders.html#a1c3b02d7e401d214f9b8aec351e19e59">Shaders::ShaderMap</a>[s.shader_key];</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
@@ -149,15 +149,19 @@ $(document).ready(function(){initNavTree('RenderSpriteSys_8hpp_source.html','');
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classRenderSpriteSystem.html#a8bd9134b43cadf4554867f9b96a784b0">   46</a></span>    Signature <a class="code hl_function" href="classRenderSpriteSystem.html#a8bd9134b43cadf4554867f9b96a784b0">GetSignature</a>()<span class="keyword"> override</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">    </span>{</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        Signature sig;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_class" href="classCoordinator.html">Coordinator</a>* cd = Coordinator::Get();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        sig[cd-&gt;GetComponentType&lt;<a class="code hl_class" href="classTransform.html">Transform</a>&gt;()].flip();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        sig[cd-&gt;GetComponentType&lt;<a class="code hl_class" href="classSprite.html">Sprite</a>&gt;()].flip();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_class" href="classCoordinator.html">Coordinator</a>* cd = <a class="code hl_function" href="classCoordinator.html#a43efa5eb7f1a1e40d2874d48901438b3">Coordinator::Get</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        sig[cd-&gt;<a class="code hl_function" href="classCoordinator.html#a355983622f49e1ff95bb5fafd202fa0d">GetComponentType</a>&lt;<a class="code hl_class" href="classTransform.html">Transform</a>&gt;()].flip();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        sig[cd-&gt;<a class="code hl_function" href="classCoordinator.html#a355983622f49e1ff95bb5fafd202fa0d">GetComponentType</a>&lt;<a class="code hl_class" href="classSprite.html">Sprite</a>&gt;()].flip();</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">return</span> sig;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
 </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
 </div>
-<div class="ttc" id="aclassCoordinator_html"><div class="ttname"><a href="classCoordinator.html">Coordinator</a></div><div class="ttdef"><b>Definition</b> Coordinator.h:9</div></div>
+<div class="ttc" id="aCoordinator_8h_html"><div class="ttname"><a href="Coordinator_8h.html">Coordinator.h</a></div></div>
+<div class="ttc" id="aclassCoordinator_html"><div class="ttname"><a href="classCoordinator.html">Coordinator</a></div><div class="ttdef"><b>Definition</b> Coordinator.h:39</div></div>
+<div class="ttc" id="aclassCoordinator_html_a355983622f49e1ff95bb5fafd202fa0d"><div class="ttname"><a href="classCoordinator.html#a355983622f49e1ff95bb5fafd202fa0d">Coordinator::GetComponentType</a></div><div class="ttdeci">ComponentType GetComponentType()</div><div class="ttdef"><b>Definition</b> Coordinator.h:254</div></div>
+<div class="ttc" id="aclassCoordinator_html_a43efa5eb7f1a1e40d2874d48901438b3"><div class="ttname"><a href="classCoordinator.html#a43efa5eb7f1a1e40d2874d48901438b3">Coordinator::Get</a></div><div class="ttdeci">static Coordinator * Get()</div><div class="ttdef"><b>Definition</b> Coordinator.h:47</div></div>
+<div class="ttc" id="aclassCoordinator_html_ab3f4c856782a98c96a4cda3b94d517fc"><div class="ttname"><a href="classCoordinator.html#ab3f4c856782a98c96a4cda3b94d517fc">Coordinator::GetComponent</a></div><div class="ttdeci">T &amp; GetComponent(Entity entity)</div><div class="ttdef"><b>Definition</b> Coordinator.h:237</div></div>
 <div class="ttc" id="aclassRenderSpriteSystem_html"><div class="ttname"><a href="classRenderSpriteSystem.html">RenderSpriteSystem</a></div><div class="ttdef"><b>Definition</b> RenderSpriteSys.hpp:10</div></div>
 <div class="ttc" id="aclassRenderSpriteSystem_html_a8bd9134b43cadf4554867f9b96a784b0"><div class="ttname"><a href="classRenderSpriteSystem.html#a8bd9134b43cadf4554867f9b96a784b0">RenderSpriteSystem::GetSignature</a></div><div class="ttdeci">Signature GetSignature() override</div><div class="ttdef"><b>Definition</b> RenderSpriteSys.hpp:46</div></div>
 <div class="ttc" id="aclassShader_html"><div class="ttname"><a href="classShader.html">Shader</a></div><div class="ttdef"><b>Definition</b> Shader.hpp:56</div></div>

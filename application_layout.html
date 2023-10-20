@@ -145,8 +145,9 @@ Subclassing Application</h2>
 Initializing Components and Systems</h2>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Perhaps make the macros for InitComponent and InitSystem not rely on the user defining <code>cd</code>?</dd></dl>
 <p>During the creation of an <a class="el" href="classApplication.html">Application</a>, you will need to initialize all the Components and Systems the app will need. All the shipped Components and Systems will be loaded during the base class <a class="el" href="classApplication.html">Application</a>'s constructor, but any user created ones will need to be loaded by the user.</p>
-<p>To aid in this, Rocket has provided two macros: InitComponent() and InitSystem(). These do approximately what you would expect: InitComponent() takes the name of a component and initializes it to the engine. InitSystem() does the same, but for Systems. To use these macros, the user must first include the line: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classCoordinator.html">Coordinator</a>* cd = Coordinator::Get();</div>
-<div class="ttc" id="aclassCoordinator_html"><div class="ttname"><a href="classCoordinator.html">Coordinator</a></div><div class="ttdef"><b>Definition</b> Coordinator.h:9</div></div>
+<p>To aid in this, Rocket has provided two macros: InitComponent() and InitSystem(). These do approximately what you would expect: InitComponent() takes the name of a component and initializes it to the engine. InitSystem() does the same, but for Systems. To use these macros, the user must first include the line: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classCoordinator.html">Coordinator</a>* cd = <a class="code hl_function" href="classCoordinator.html#a43efa5eb7f1a1e40d2874d48901438b3">Coordinator::Get</a>();</div>
+<div class="ttc" id="aclassCoordinator_html"><div class="ttname"><a href="classCoordinator.html">Coordinator</a></div><div class="ttdef"><b>Definition</b> Coordinator.h:39</div></div>
+<div class="ttc" id="aclassCoordinator_html_a43efa5eb7f1a1e40d2874d48901438b3"><div class="ttname"><a href="classCoordinator.html#a43efa5eb7f1a1e40d2874d48901438b3">Coordinator::Get</a></div><div class="ttdeci">static Coordinator * Get()</div><div class="ttdef"><b>Definition</b> Coordinator.h:47</div></div>
 </div><!-- fragment --><p> These two macros rely on the definition of the variable <code>cd</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>To learn more about the Coordinator, see its class page <a class="el" href="classCoordinator.html">here</a>.</dd></dl>
 <h2><a class="anchor" id="main_function"></a>
@@ -166,7 +167,7 @@ The Main Function</h2>
 <div class="line">    <span class="keywordtype">double</span> prev_time = glfwGetTime();</div>
 <div class="line">    <span class="keywordtype">double</span> deltatime = 0;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classCoordinator.html">Coordinator</a>* cd = Coordinator::Get();</div>
+<div class="line">    <a class="code hl_class" href="classCoordinator.html">Coordinator</a>* cd = <a class="code hl_function" href="classCoordinator.html#a43efa5eb7f1a1e40d2874d48901438b3">Coordinator::Get</a>();</div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_function" href="LoadRscene_8cpp.html#a1c5c70438301ce70eb028e5bba115125">LoadScene</a>(<span class="stringliteral">&quot;res/scene.rscene&quot;</span>);</div>
 <div class="line"> </div>
@@ -175,13 +176,13 @@ The Main Function</h2>
 <div class="line">        curr_time = glfwGetTime();</div>
 <div class="line">        deltatime = curr_time - prev_time;</div>
 <div class="line"> </div>
-<div class="line">        cd-&gt;GetSystem&lt;<a class="code hl_class" href="classCollisionSystem.html">CollisionSystem</a>&gt;()-&gt;Do();</div>
+<div class="line">        cd-&gt;<a class="code hl_function" href="classCoordinator.html#afd4506213d1d71a5b355344e9619f9cf">GetSystem</a>&lt;<a class="code hl_class" href="classCollisionSystem.html">CollisionSystem</a>&gt;()-&gt;Do();</div>
 <div class="line"> </div>
-<div class="line">        cd-&gt;GetSystem&lt;<a class="code hl_class" href="classCollisionSystem.html">CollisionSystem</a>&gt;()-&gt;Clear();</div>
+<div class="line">        cd-&gt;<a class="code hl_function" href="classCoordinator.html#afd4506213d1d71a5b355344e9619f9cf">GetSystem</a>&lt;<a class="code hl_class" href="classCollisionSystem.html">CollisionSystem</a>&gt;()-&gt;Clear();</div>
 <div class="line"> </div>
 <div class="line">        glClearColor(0.0f, 0.0f, 0.0f, 0.0f);</div>
 <div class="line">        glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);</div>
-<div class="line">        cd-&gt;GetSystem&lt;<a class="code hl_class" href="classRenderSpriteSystem.html">RenderSpriteSystem</a>&gt;()-&gt;Do();</div>
+<div class="line">        cd-&gt;<a class="code hl_function" href="classCoordinator.html#afd4506213d1d71a5b355344e9619f9cf">GetSystem</a>&lt;<a class="code hl_class" href="classRenderSpriteSystem.html">RenderSpriteSystem</a>&gt;()-&gt;Do();</div>
 <div class="line"> </div>
 <div class="line">        glfwPollEvents();</div>
 <div class="line">        glfwSwapBuffers(m_window);</div>
@@ -195,6 +196,7 @@ The Main Function</h2>
 <div class="line">}</div>
 <div class="ttc" id="aLoadRscene_8cpp_html_a1c5c70438301ce70eb028e5bba115125"><div class="ttname"><a href="LoadRscene_8cpp.html#a1c5c70438301ce70eb028e5bba115125">LoadScene</a></div><div class="ttdeci">void LoadScene(const std::string &amp;filepath)</div><div class="ttdef"><b>Definition</b> LoadRscene.cpp:53</div></div>
 <div class="ttc" id="aclassCollisionSystem_html"><div class="ttname"><a href="classCollisionSystem.html">CollisionSystem</a></div><div class="ttdef"><b>Definition</b> CollisionSystem.hpp:8</div></div>
+<div class="ttc" id="aclassCoordinator_html_afd4506213d1d71a5b355344e9619f9cf"><div class="ttname"><a href="classCoordinator.html#afd4506213d1d71a5b355344e9619f9cf">Coordinator::GetSystem</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; GetSystem()</div><div class="ttdef"><b>Definition</b> Coordinator.h:276</div></div>
 <div class="ttc" id="aclassRenderSpriteSystem_html"><div class="ttname"><a href="classRenderSpriteSystem.html">RenderSpriteSystem</a></div><div class="ttdef"><b>Definition</b> RenderSpriteSys.hpp:10</div></div>
 </div><!-- fragment --><h2><a class="anchor" id="the_other_main"></a>
 The... other main function</h2>

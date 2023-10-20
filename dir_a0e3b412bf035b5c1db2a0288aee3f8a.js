@@ -4,7 +4,7 @@ var dir_a0e3b412bf035b5c1db2a0288aee3f8a =
     [ "Systems", "dir_e2e4a943971d97863e6ebd398467368e.html", "dir_e2e4a943971d97863e6ebd398467368e" ],
     [ "Component.h", "Component_8h.html", "Component_8h" ],
     [ "ComponentManager.h", "ComponentManager_8h.html", "ComponentManager_8h" ],
-    [ "Coordinator.h", "Coordinator_8h_source.html", null ],
+    [ "Coordinator.h", "Coordinator_8h.html", "Coordinator_8h" ],
     [ "Entity.h", "Entity_8h.html", "Entity_8h" ],
     [ "EntityManager.h", "EntityManager_8h_source.html", null ],
     [ "IComponentArray.h", "IComponentArray_8h_source.html", null ],
